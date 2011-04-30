@@ -24,10 +24,10 @@ For documentation, see the downloads section.
 3. Install NLTK (from a repository or from <http://www.nltk.org/>).
 4. Install the following NLTK corpora:
 
-   * wordnet
-   * verbnet
-   * names
-   * cmudict
+    * wordnet
+    * verbnet
+    * names
+    * cmudict
 
    You can do this by running "import nltk; nltk.download()" in a Python REPL.
    This will display a GUI to select the corpora to download. Take note of the
@@ -50,8 +50,8 @@ source from <http://www.cs.unm.edu/~mccune/prover9/download/>, apply
 
 ## Grammar
 
-The repository includes a hand-optimized grammar.fcfg file in grammar.gz. This
-file is based on the result of the grammar building pipeline in the build
+The repository includes a hand-optimized grammar.fcfg file in grammar.tat.gz.
+This file is based on the result of the grammar building pipeline in the build
 folder. Some optimizations were added manually but the details of what happened
 that night have been lost.
 
