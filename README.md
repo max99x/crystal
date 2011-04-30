@@ -21,12 +21,14 @@ For documentation, see the downloads section.
 
 1. Checkout the Crystal code or unpack a source package.
 2. Install Python 2.7.
-3. Install NLTK (from a repository or from http://www.nltk.org/).
+3. Install NLTK (from a repository or from <http://www.nltk.org/>).
 4. Install the following NLTK corpora:
+
    * wordnet
    * verbnet
    * names
    * cmudict
+
    You can do this by running "import nltk; nltk.download()" in a Python REPL.
    This will display a GUI to select the corpora to download. Take note of the
    folder where the corpora are downloaded.
@@ -34,17 +36,17 @@ For documentation, see the downloads section.
    at the time of writing), you will need to manually update it to version 3.1.
    Download it from <http://verbs.colorado.edu/~mpalmer/projects/verbnet/>,
    unpack and place in the corpora folder specified in step 4.
-6. Either unpack the optimized grammar by running "tar -xf grammar.tar.gz" in
-   the src folder or run "./__main__.py --grammar" to rebuild an unoptimized
+6. Either unpack the optimized grammar by running `tar -xf grammar.tar.gz` in
+   the src folder or run `./__main__.py --grammar` to rebuild an unoptimized
    grammar from scratch.
-7. Run "./__main__.py".
+7. Run `./__main__.py`.
 8. Take a good long walk while the grammar is being loaded.
 9. Use.
 
 Note that compiled binaries for Mace4 and Prover9 for Windows and 32-bit Unix
 are already included. If you want to build your own copies, download the LADR
 source from <http://www.cs.unm.edu/~mccune/prover9/download/>, apply
-src/prover/cnf.c.patch to ladr/cnf.c and run "make all" in the LADR root.
+`src/prover/cnf.c.patch` to `ladr/cnf.c` and run `make all` in the LADR root.
 
 ## Grammar
 
@@ -53,7 +55,7 @@ file is based on the result of the grammar building pipeline in the build
 folder. Some optimizations were added manually but the details of what happened
 that night have been lost.
 
-To rebuild the default unoptimized grammar, run "./__main__.py --grammar". Be
+To rebuild the default unoptimized grammar, run `./__main__.py --grammar`. Be
 careful, however, as that this will overwrite the current optimized grammar.
 
 ## Usage
@@ -88,7 +90,8 @@ per sentence for simple sentences on a midrange PC, 5-10 seconds for complex or
 highly ambiguous sentences and up to several minutes in degenerate cases. The
 bottlenecks are mostly fixable, but since the system was never meant to be more
 than a proof of concept, I do not plan to ever fix them properly. Memory usage
-is similarly ugly, at about 800MB when the full WordNet vocabulary is loaded.
+is similarly ugly, at about 800MB on 32-bit systems when the full WordNet
+vocabulary is loaded.
 
 ## License
 
