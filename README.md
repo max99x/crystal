@@ -57,7 +57,7 @@ source from <http://www.cs.unm.edu/~mccune/prover9/download/>, apply
 
 ## Grammar
 
-The repository includes a hand-optimized grammar file in `grammar.tat.gz`. This
+The repository includes a hand-optimized grammar file in `grammar.tar.gz`. This
 file is based on the result of the grammar building pipeline in the build
 folder. Some optimizations were added manually but the details of what happened
 that night have been lost.
