@@ -20,27 +20,34 @@ For documentation, see the downloads section.
 ## Getting Started
 
 1. Checkout the Crystal code or unpack a source package.
-2. Install Python 2.7.
-3. Install NLTK (from a repository or from <http://www.nltk.org/>).
-4. Install the following NLTK corpora:
 
+2. Install Python 2.7.
+
+3. Install NLTK (from a repository or from <http://www.nltk.org/>).
+
+4. Install the following NLTK corpora:
     * wordnet
     * verbnet
     * names
     * cmudict
 
-   You can do this by running "import nltk; nltk.download()" in a Python REPL.
-   This will display a GUI to select the corpora to download. Take note of the
-   folder where the corpora are downloaded.
+    You can do this by running "import nltk; nltk.download()" in a Python REPL.
+    This will display a GUI to select the corpora to download. Take note of the
+    folder where the corpora are downloaded.
+
 5. If the VerbNet corpus in the NLTK repository is still version 2.1 (as it is
-   at the time of writing), you will need to manually update it to version 3.1.
-   Download it from <http://verbs.colorado.edu/~mpalmer/projects/verbnet/>,
-   unpack and place in the corpora folder specified in step 4.
+    at the time of writing), you will need to manually update it to version 3.1.
+    Download it from <http://verbs.colorado.edu/~mpalmer/projects/verbnet/>,
+    unpack and place in the corpora folder specified in step 4.
+
 6. Either unpack the optimized grammar by running `tar -xf grammar.tar.gz` in
-   the src folder or run `./__main__.py --grammar` to rebuild an unoptimized
-   grammar from scratch.
+    the src folder or run `./__main__.py --grammar` to rebuild an unoptimized
+    grammar from scratch.
+
 7. Run `./__main__.py`.
+
 8. Take a good long walk while the grammar is being loaded.
+
 9. Use.
 
 Note that compiled binaries for Mace4 and Prover9 for Windows and 32-bit Unix
@@ -50,8 +57,8 @@ source from <http://www.cs.unm.edu/~mccune/prover9/download/>, apply
 
 ## Grammar
 
-The repository includes a hand-optimized grammar.fcfg file in grammar.tat.gz.
-This file is based on the result of the grammar building pipeline in the build
+The repository includes a hand-optimized grammar file in `grammar.tat.gz`. This
+file is based on the result of the grammar building pipeline in the build
 folder. Some optimizations were added manually but the details of what happened
 that night have been lost.
 
