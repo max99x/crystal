@@ -1,0 +1,197 @@
+d: DRT
+x: entity referent (lowercase for singular, uppercase for plural/mass).
+v: verb referent
+s: string
+[?]: list of elements of type ?
+?x, ?y, ...: type variable
+
+S :: d
+VP :: [(x -> d) -> d] -> (x -> d)
+NP :: (x -> d) -> d
+Verb :: v
+CV :: v
+PP :: x -> d
+PN :: (x -> d) -> d
+Ttl :: s
+PrpN :: s
+DT :: ((x -> d), (x -> d)) -> d
+AJP :: x -> d
+Adj :: x -> d
+Noun :: x -> d
+Prep :: s
+Cnj :: ?x, ?x -> ?x
+Cond :: -
+Art :: ((x -> d), (x -> d)) -> d
+Pro :: (x -> d) -> d
+
+
+---------------
+
+
+((a cat) and (a dog)) (eat and drink)
+
+a: P,Q -> [y|] + P(y) + Q(y)
+cat: x -> [|cat(x)]
+and: A,B -> (Q -> Q(A) + Q(B))
+a: P,Q -> [z|] + P(z) + Q(z)
+dog: x -> [|dog(x)]
+eat: x -> [|eat(x)]
+and: A,B -> (Q -> Q(A) + Q(B))
+drink: x -> [|drink(x)]
+
+a cat: Q -> [y|] + [|cat(y)] + Q(y)
+a dog: Q -> [z|] + [|dog(z)] + Q(z)
+a cat and a dog: Q -> [y|] + [|cat(y)] + Q(y) + [z|] + [|dog(z)] + Q(z)
+eat and drink: x-> [|eat(x)] + [|drink(x)]
+a cat and a dog eat and drink: [y,z|cat(y), eat(y), drink(y), dog(z), eat(z), drink(z)]
+
+
+---------------
+
+
+((a cat) and (a dog)) (eat and drink)
+
+a: P,Q -> [y|] + P(y) + Q(y)
+cat: x -> [|cat(x)]
+and: A,B -> (Q -> Q(A) + Q(B))
+a: P,Q -> [z|] + P(z) + Q(z)
+dog: x -> [|dog(x)]
+eat: x -> [v|eat(v), Agent(v, x), animate(x)]
+and: A,B -> (Q -> Q(A) + Q(B))
+drink: x -> [w|drink(w), Agent(w, x), animate(x)]
+
+a cat: Q -> [y|] + [|cat(y)] + Q(y)
+a dog: Q -> [z|] + [|dog(z)] + Q(z)
+a cat and a dog: Q -> [y|] + [|cat(y)] + Q(y) + [z|] + [|dog(z)] + Q(z)
+eat and drink: x -> [v|eat(v), Agent(v, x), animate(x)] + [w|drink(w), Agent(w, x), animate(x)]
+a cat and a dog eat and drink: [y,v,w,z,v2,w2|cat(y), eat(v), Agent(v, y), animate(y), drink(w), Agent(w, y), animate(y), dog(z), eat(v2), Agent(v2, z), animate(z), drink(w), Agent(w2, z), animate(z)]
+
+.------------------.
+|y, z, v, w, v2, w2|
+|------------------|
+|animate(y)        |
+|cat(y)            |
+|                  |
+|eat(v)            |
+|Agent(v, y)       |
+|                  |
+|drink(w)          |
+|Agent(w, y)       |
+|                  |
+|                  |
+|animate(z)        |
+|dog(z)            |
+|                  |
+|eat(v2)           |
+|Agent(v2, z)      |
+|                  |
+|drink(w2)         |
+|Agent(w2, z)      |
+'------------------'
+
+
+---------------
+
+
+Jack eats an apple: [x1,x2,v|eat(v), _agent(v, x1), animate(x1), _patient(v, x2), comestible(x2), solid(x2)]
+
+[v|eat(v)] +
+NP_agent(x->[_agent(v, x), animate(x)]) +
+NP_patient(x->[_patient(v, x), comestible(x), solid(x)])
+
+
+---------------
+
+
+no dog drinks
+
+no: P,Q -> [|([y|] + P(y)) -> [ | not(Q(y))]
+dog: x -> [|dog(x)]
+drinks: x -> [|drink(x)]
+
+no dog: Q -> [|not([y|] + [|dog(y)] + Q(y))]
+no dog drinks: [ | not([y | dog(y), drink(y))]
+
+
+---------------
+
+
+the dog drinks
+
+the: P,Q -> <<[y|] + P(y)>> Q(y)
+dog: x -> [|dog(x)]
+drinks: x -> [|drink(x)]
+
+the dog: Q -> <<[y|] + [|dog(y)]>> Q(y)
+the dog drinks: <<[y|dog(y)]>> drink(y)
+
+
+---------------
+
+
+no dog eats a cat
+
+no: P,Q -> [|([y|] + P(y)) -> [ | not(Q(y))]
+dog: x -> [|dog(x)]
+eats: x,P -> [w|eat(w), Agent(w, x), animate(x)] + P(?)
+      y -> [w|eat(w), Patient(w, y), comestible(y)]
+a: P,Q -> [y|] + P(y) + Q(y)
+cat: x -> [|cat(x)]
+
+no dog: Q -> [|[x|dog(x)] -> [ | not(Q(x))]
+a cat: Q -> [y|cat(y)] + Q(y)
+eats a cat: x -> [w,y|Agent(w, x), animate(x), cat(y), Patient(w, y), comestible(y)]
+no dog eats a cat: [|[x|dog(x)] -> [ | not([w,y|Agent(w, x), animate(x), cat(y), Patient(w, y), comestible(y)])]
+
+
+---------------
+
+
+the dog is drunk
+
+the: P,Q -> <<[y|] + P(y)>> Q(y)
+dog: x -> [|dog(x)]
+is: -
+drunk: x -> [|drunk(x)]
+
+the dog: Q -> <<[y|] + [|dog(y)]>> Q(y)
+the dog is drunk: <<[y|] + [|dog(y)]>> [|drunk(y)]
+
+
+---------------
+
+
+the dog is a common animal
+
+the: P,Q -> <<[y|] + P(y)>> Q(y)
+dog: x -> [|dog(x)]
+is: -
+a: P,Q -> [y|] + P(y) + Q(y)
+common: x -> [|common(x)]
+animal: x -> [|animal(x)]
+
+the dog: Q -> <<[x|dog(x)]>> Q(x)
+a common animal: Q -> [y|common(y), animal(y)] + Q(y)
+the dog is a common animal: <<[x|dog(x)]>> [y|common(y), animal(y), x=y]
+
+
+---------------
+
+
+a cat in the yard is hungry
+
+a: P,Q -> [y|] + P(y) + Q(y)
+cat: x -> [|cat(x)]
+in: -
+the: P,Q -> <<[y|] + P(y)>> Q(y)
+yard: x -> [|yard(x)]
+is: -
+hungry: x -> [|hungry(x)]
+
+a cat: P -> [y|cat(y)] + P(y)
+the yard: Q -> <<[x|yard(x)]>> Q(x)
+in the yard: y -> <<[x|yard(x)]>> [in(y,x)]
+a cat in the yard: P -> <<[x|yard(x)]>> [y|cat(y),in(y,x)] + P(y)
+a cat in the yard is hungry: P -> <<[x|yard(x)]>> [y|cat(y),in(y,x),hungry(y)]
+
+

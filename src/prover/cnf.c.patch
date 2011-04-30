@@ -1,0 +1,17 @@
+*** ladr/cnf_OLD.c	2011-04-30 19:43:00.040309423 +0300
+--- ladr/cnf.c	2011-04-30 19:34:34.850296998 +0300
+***************
+*** 509,514 ****
+        f->kids[i] = cnf(f->kids[i]);
+      
+      if (f->type == AND_FORM) {
+-       f = flatten_top(f);
+        f = simplify_and_share(f);
+        return f;
+--- 509,514 ----
+        f->kids[i] = cnf(f->kids[i]);
+      
++     f = flatten_top(f);
+      if (f->type == AND_FORM) {
+        f = simplify_and_share(f);
+        return f;

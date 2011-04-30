@@ -1,0 +1,60 @@
+> Mia is a woman.
+> Alice and John waltz.
+> He is happy.
+> Vincent eats a tasty sandwich.
+! Jack does not waltz.
+
+? What is Mary doing?
+  -> Waltzing.
+? Who is eating?
+  -> Vincent.
+? What is Jack eating?
+  -> No known entities match the query.
+? What is Vincent eating?
+  -> The tasty sandwich.
+? Who is happy?
+  -> Jack.
+
+--------------------------------------------------------------------------------
+
+> A cat is sitting under a tree.
+> The cat is eating a fish.
+> There are flowers under the tree.
+> The red flowers are blooming.
+> The blue flowers are wilted.
+> All flowers are in the shade of the tree.
+> Everything that is in the shade is not in the sun.
+! Some flowers are in the sun.
+
+? What is under the tree?
+  -> The cat and the flowers.
+  -> The cat and the flowers are under the tree.
+  -> The cat, the red flowers and the blue flowers.
+  -> The cat, the red flowers and the blue flowers are under the tree.
+? What is blooming?
+  -> The red flowers.
+  -> The red flowers are blooming.
+? What does the cat like?
+  -> The fish.
+  -> It likes the fish.
+  -> The cat likes the fish.
+
+--------------------------------------------------------------------------------
+
+> A tree is a tall plant.
+> It has a trunk and branches.
+> The roots of the tree are under the ground.
+> The tree's leaves are green.
+? What does the tree have?
+? What is under the ground?
+
+? What are the parts of a tree?
+  -> The roots, the trunk, the branches and the leaves.
+  -> The parts of a tree are the roots, the trunk, the branches and the leaves.
+? What is a tree?
+  -> A tree is a tall plant.
+     It has a trunk and branches.
+     Its main parts which are the roots, the trunk, the branches and the leaves.
+? What are roots?
+  -> Roots are parts of a tree.
+     They are usually under the ground.

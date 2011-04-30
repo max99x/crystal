@@ -1,0 +1,35 @@
+A dog is hungry.
+The dog is hungry.
+A dog waltzes.
+A dog waltzes. The dog is hungry.
+A dog waltzes. The cat is hungry.
+A dog waltzes. The man is hungry.
+A dog waltzes. It is hungry.
+*A dog waltzes. She is hungry.
+*A spoon waltzes.
+*He dances.
+*A dog eats it.
+A dog is a dog.
+A dog is not a dog. (animal != sausage)
+*A candelabra is not a candelabra.
+A dog is not a cat.
+The dog is not the cat.
+A dog is not the cat.
+Mary is the best.
+If a dog is hungry then it is angry.
+If a dog is hungry then the dog is angry.
+If a dog is hungry then the cat is angry.
+If a dog is hungry then a dog is angry.
+*If a hippo is hungry then she is angry.
+If Alice dances, she is happy.
+If a farmer owns a donkey, he beats it.
+If Mia is married, she has a husband.
+If Mia is aghast, she is not aghast.
+If a farmer owns a hippo, he eats it.
+Alice likes pets. The dog is hers.
+Alice has a cat. The dog is hers.
+Alice has a cat. Her cat is cute.
+The man's assistant is lazy.
+Bob is busy. His assistant is lazy.
+Bob is busy. The man is lazy.
+Bob is busy. The man's assistant is lazy.

@@ -1,0 +1,50 @@
+Automate the grammar optimization
+  for r in s:
+  ... 	for i in xrange(1, 158):
+  ... 		out.append(re.sub(r'\b(\w+)(\[\S*?),PTRN=\?\w+', r'\1_%s\2' % i, r))
+  ... 	out.append('\n')
+Find a way to enforce semantic limitations on adjectives
+Properly resolve plural anaphora to multiple singular referents
+Convert resolution to a generator
+Syntax
+  Verb Subject Questions
+  PP Subject Questions
+Semantics
+  Verb Subject Questions
+  PP Subject Questions
+Reflexive pronouns
+Disambiguate
+  [A man]'s wallet / A [man's wallet]
+[PP] There VB ...
+[PP] It VB ...
+Non-personal pronouns
+  Something / Everything / Someone / Everyone
+  Demonstrative: this, that, such
+  Interrogative: who, which (in WH questions)
+  Relative: who, which
+  Indefinite: each, either, some, any, many, few, all
+Semantics of 1st- and 2nd-person pronouns
+Because / Due to
+Series Conjunctions
+  NP[NUM=pl,PER=3,CASE=?c,RUL=399] -> NP[CASE=?c] (',' NP[CASE=?c])* Cnj[-compound,+np,+series] NP[CASE=?c]
+Adverbs (including verb- or adjective-modifying prepositional phrases)
+Temporal data
+Tense distinction
+Modals
+Passive voice
+Semantic understanding of numbers
+Compound adjectives?
+Multiple instances of proper names
+Entities with multiple proper names
+Subordinate clauses
+Numbers
+Subject/Object scope ambiguity
+Imperative
+Subjunctive
+Tagged questions
+Pro-verbs in declarative sentences
+Pro-adjectives and pro-adverbs
+"Minor" (verbless) sentences
+Echo questions
+Multi-target questions
+  

@@ -1,0 +1,233 @@
+What it is NOT
+  Chatbot
+  Complete in coverage
+  Efficient
+
+Anaphora + Conjunction
+  Alice and Vincent are waltzing in the hall.
+  She is happy.
+  Who is waltzing?
+  Who is dancing?
+  Who is happy?
+    Alice and Vincent are waltzing in the hall.
+    Found 13 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      waltzing: dance a waltz.
+      hall: an interior passage or corridor onto which rooms open.
+    Statement understood and added to context.
+    She is happy.
+    Found 5 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      happy: enjoying or showing or marked by joy or pleasure.
+    Statement understood and added to context.
+    Who is waltzing?
+    Found 3 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      waltzing: dance a waltz.
+    Alice and Vincent.
+    Who is dancing?
+    Found 12 parse trees.
+    Evaluated 4 interpretations.
+    Inferred word senses:
+      dancing: move in a pattern; usually to musical accompaniment; do or perform a dance.
+    Alice and Vincent.
+    Who is happy?
+    Found 15 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      happy: enjoying or showing or marked by joy or pleasure.
+    Alice.
+Inference
+  Socrates is a man.
+  Is Socrates mortal?
+  Every man is mortal.
+  Is Socrates mortal?
+    Socrates is a man.
+    Found 20 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      man: an adult person who is male (as opposed to a woman).
+    Statement understood and added to context.
+    Is Socrates mortal?
+    Found 8 parse trees.
+    Evaluated 8 interpretations.
+    Inferred word senses:
+      mortal: subject to death.
+    That is unknown.
+    Every man is mortal.
+    Found 44 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      man: an adult person who is male (as opposed to a woman).
+      mortal: subject to death.
+    Statement understood and added to context.
+    Is Socrates mortal?
+    Found 8 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      mortal: subject to death.
+    Yes.
+Donkey Sentences
+  Ahmad is a farmer and has a mule.
+  Whom does Ahmad beat?
+  If a farmer owns a mule, he beats it.
+  Whom does Ahmad beat?
+    Ahmad is a farmer and has a mule.
+    Found 2 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      farmer: a person who operates a farm.
+      has: have ownership or possession of.
+      mule: hybrid offspring of a male donkey and a female horse; usually sterile.
+    Statement understood and added to context.
+    Whom does Ahmad beat?
+    Found 15 parse trees.
+    Evaluated 15 interpretations.
+    Inferred word senses:
+      beat: give a beating to; subject to a beating, either as a punishment or as an act of aggression.
+    No known entities match the query.
+    If a farmer owns a mule, he beats it.
+    Found 120 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      farmer: a person who operates a farm.
+      owns: have ownership or possession of.
+      mule: hybrid offspring of a male donkey and a female horse; usually sterile.
+      beats: give a beating to; subject to a beating, either as a punishment or as an act of aggression.
+    Statement understood and added to context.
+    Whom does Ahmad beat?
+    Found 15 parse trees.
+    Evaluated 2 interpretations.
+    Inferred word senses:
+      beat: give a beating to; subject to a beating, either as a punishment or as an act of aggression.
+    Ahmad's mule.
+POS Disambiguation
+  Many soldiers desert the desert base.
+  What do the men desert?
+    Many soldiers desert the desert base.
+    Found 38 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      soldiers: an enlisted man or woman who serves in an army.
+      desert: leave someone who needs or counts on you; leave in the lurch.
+      desert: arid land with little or no vegetation.
+      base: installation from which a military force initiates operations.
+    Statement understood and added to context.
+    What do the men desert?
+    Found 11 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      men: someone who serves in the armed forces; a member of a military force.
+      desert: leave someone who needs or counts on you; leave in the lurch.
+    The desert base.
+Meaning Disambiguation + Multi-word Lemmas
+  Mia is sitting on a grassy bank.
+  The bank denied John's loan.
+  The blood bank needs donations.
+  The west bank is occupied.
+    Mia is sitting on a grassy bank.
+    Found 90 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      sitting: be seated.
+      grassy: abounding in grass.
+      bank: sloping land (especially the slope beside a body of water).
+    Statement understood and added to context.
+    The bank denied John's loan.
+    Found 88 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      bank: a financial institution that accepts deposits and channels the money into lending activities.
+      denied: refuse to recognize or acknowledge.
+      loan: the temporary provision of money (usually at interest).
+    Statement understood and added to context.
+    The blood bank needs donations.
+    Found 896 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      blood bank: a place for storing whole blood or blood plasma.
+      needs: require as useful, just, or proper.
+      donations: a voluntary gift (as of money or service or ideas) made to some worthwhile cause.
+    Statement understood and added to context.
+    The west bank is occupied.
+    Found 180 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      west bank: an area between Israel and Jordan on the west bank of the Jordan river; populated largely by Palestinians.
+      occupied: held or filled or in use.
+    Statement understood and added to context.
+Presupposition Resolution
+  A cat is chasing a mouse.
+  The rodent is scared.
+  What does the cat chase?
+    A cat is chasing a mouse.
+    Found 56 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      cat: feline mammal usually having thick soft fur and no ability to roar: domestic cats; wildcats.
+      chasing: go after with the intent to catch.
+      mouse: any of numerous small rodents typically resembling diminutive rats having pointed snouts and small ears on elongated bodies with slender usually hairless tails.
+    Statement understood and added to context.
+    The rodent is scared.
+    Found 1 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      rodent: relatively small placental mammals having a single pair of constantly growing incisor teeth specialized for gnawing.
+      scared: made afraid.
+    Statement understood and added to context.
+    What does the cat chase?
+    Found 18 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      cat: feline mammal usually having thick soft fur and no ability to roar: domestic cats; wildcats.
+      chase: go after with the intent to catch.
+    The frightened mouse.
+Possession Unification
+  An elephant is a large mammal.
+  It has a snout and tusks.
+  The ears of the elephant are large.
+  The animal's hide is grey.
+  What does the elephant have?
+  What is gray?
+    An elephant is a large mammal.
+    Found 16 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      elephant: five-toed pachyderm.
+      large: above average in size or number or quantity or magnitude or extent.
+      mammal: any warm-blooded vertebrate having the skin more or less covered with hair; young are born alive except for the small subclass of monotremes and nourished with milk.
+    Statement understood and added to context.
+    It has a snout and tusks.
+    Found 3 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      has: have ownership or possession of.
+      snout: a long projecting or anterior elongation of an animal's head; especially the nose.
+      tusks: a long pointed tooth specialized for fighting or digging; especially in an elephant or walrus or hog.
+    Statement understood and added to context.
+    The ears of the elephant are large.
+    Found 70 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      ears: the sense organ for hearing and equilibrium.
+      elephant: five-toed pachyderm.
+      large: above average in size or number or quantity or magnitude or extent.
+    Statement understood and added to context.
+    The animal's hide is grey.
+    Found 16 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      animal: a living organism characterized by voluntary movement.
+      hide: body covering of a living animal.
+      grey: of an achromatic color of any lightness intermediate between the extremes of white and black.
+    Statement understood and added to context.
+    What does the elephant have?
+    Found 2 parse trees.
+    Evaluated 1 interpretation.
+    Inferred word senses:
+      elephant: five-toed pachyderm.
+      have: have ownership or possession of.
+    The grey hide, the snout, the large ears and the tusks.

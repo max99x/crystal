@@ -1,0 +1,7 @@
+This folder should contain the LADR binaries, Mace4 and Prover9.
+  For Unix, use "mace4" and "prover9" (32-bit binaries).
+  For Windows, use "mace4.exe", "prover9.exe". This also uses "cygwin1.dll".
+
+This folder also includes a patch for LADR's cnf.c that has to be applied to
+version LADR-2009-11A (latest at the time of writing) to produce the binaries
+stored here.

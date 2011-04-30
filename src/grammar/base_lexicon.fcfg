@@ -1,0 +1,436 @@
+################################################################################
+#                                   Honorifics                                 #
+################################################################################
+
+Ttl[NUM=?n,SEX=?s,-abbr] -> Ttl[NUM=?n,SEX=?s,+abbr] '.'
+Ttl[NUM=sg,SEX=m,+abbr] -> 'mr'
+Ttl[NUM=sg,SEX=m] -> 'mister'
+Ttl[NUM=sg,SEX=m] -> 'master'
+Ttl[NUM=sg,SEX=m] -> 'sir'
+Ttl[NUM=sg,SEX=f,+abbr] -> 'mrs'
+Ttl[NUM=sg,SEX=f] -> 'miss'
+Ttl[NUM=sg,SEX=f,+abbr] -> 'ms'
+Ttl[NUM=sg,SEX=m] -> 'coach'
+Ttl[NUM=sg,SEX=f] -> 'coach'
+Ttl[NUM=sg,SEX=m,+abbr] -> 'dr'
+Ttl[NUM=sg,SEX=f,+abbr] -> 'dr'
+Ttl[NUM=sg,SEX=m] -> 'doctor'
+Ttl[NUM=sg,SEX=f] -> 'doctor'
+Ttl[NUM=sg,SEX=m,+abbr] -> 'prof'
+Ttl[NUM=sg,SEX=f,+abbr] -> 'prof'
+Ttl[NUM=sg,SEX=m] -> 'professor'
+Ttl[NUM=sg,SEX=f] -> 'professor'
+Ttl[NUM=sg,SEX=m,+abbr] -> 'rev'
+Ttl[NUM=sg,SEX=m] -> 'reverend'
+
+Ttl[NUM=sg,SEX=m,+abbr] -> 'hon'
+Ttl[NUM=sg,SEX=f,+abbr] -> 'hon'
+Ttl[NUM=sg,SEX=m] -> 'honorable'
+Ttl[NUM=sg,SEX=f] -> 'honorable'
+Ttl[NUM=sg,SEX=m] -> 'judge'
+Ttl[NUM=sg,SEX=f] -> 'judge'
+Ttl[NUM=sg,SEX=m,+abbr] -> 'gov'
+Ttl[NUM=sg,SEX=f,+abbr] -> 'gov'
+Ttl[NUM=sg,SEX=m] -> 'governor'
+Ttl[NUM=sg,SEX=f] -> 'governor'
+Ttl[NUM=sg,SEX=m,+abbr] -> 'rep'
+Ttl[NUM=sg,SEX=f,+abbr] -> 'rep'
+Ttl[NUM=sg,SEX=m] -> 'representative'
+Ttl[NUM=sg,SEX=f] -> 'representative'
+Ttl[NUM=sg,SEX=m,+abbr] -> 'sen'
+Ttl[NUM=sg,SEX=f,+abbr] -> 'sen'
+Ttl[NUM=sg,SEX=m] -> 'senator'
+Ttl[NUM=sg,SEX=f] -> 'senator'
+Ttl[NUM=sg,SEX=m] -> 'ambassador'
+Ttl[NUM=sg,SEX=f] -> 'ambassador'
+Ttl[NUM=sg,SEX=m,+abbr] -> 'sec'
+Ttl[NUM=sg,SEX=f,+abbr] -> 'sec'
+Ttl[NUM=sg,SEX=m] -> 'secretary'
+Ttl[NUM=sg,SEX=f] -> 'secretary'
+Ttl[NUM=sg,SEX=m,+abbr] -> 'pres'
+Ttl[NUM=sg,SEX=f,+abbr] -> 'pres'
+Ttl[NUM=sg,SEX=m] -> 'president'
+Ttl[NUM=sg,SEX=f] -> 'president'
+
+Ttl[NUM=sg,SEX=m,+abbr] -> 'ofc'
+Ttl[NUM=sg,SEX=f,+abbr] -> 'ofc'
+Ttl[NUM=sg,SEX=m] -> 'officer'
+Ttl[NUM=sg,SEX=f] -> 'officer'
+Ttl[NUM=sg,SEX=m,+abbr] -> 'pvt'
+Ttl[NUM=sg,SEX=f,+abbr] -> 'pvt'
+Ttl[NUM=sg,SEX=m] -> 'private'
+Ttl[NUM=sg,SEX=f] -> 'private'
+Ttl[NUM=sg,SEX=m,+abbr] -> 'cpl'
+Ttl[NUM=sg,SEX=f,+abbr] -> 'cpl'
+Ttl[NUM=sg,SEX=m] -> 'corporal'
+Ttl[NUM=sg,SEX=f] -> 'corporal'
+Ttl[NUM=sg,SEX=m,+abbr] -> 'sgt'
+Ttl[NUM=sg,SEX=f,+abbr] -> 'sgt'
+Ttl[NUM=sg,SEX=m] -> 'sargent'
+Ttl[NUM=sg,SEX=f] -> 'sargent'
+Ttl[NUM=sg,SEX=m,+abbr] -> 'maj'
+Ttl[NUM=sg,SEX=f,+abbr] -> 'maj'
+Ttl[NUM=sg,SEX=m] -> 'major'
+Ttl[NUM=sg,SEX=f] -> 'major'
+Ttl[NUM=sg,SEX=m,+abbr] -> 'capt'
+Ttl[NUM=sg,SEX=f,+abbr] -> 'capt'
+Ttl[NUM=sg,SEX=m] -> 'captain'
+Ttl[NUM=sg,SEX=f] -> 'captain'
+Ttl[NUM=sg,SEX=m,+abbr] -> 'cmdr'
+Ttl[NUM=sg,SEX=f,+abbr] -> 'cmdr'
+Ttl[NUM=sg,SEX=m] -> 'commander'
+Ttl[NUM=sg,SEX=f] -> 'commander'
+Ttl[NUM=sg,SEX=m,+abbr] -> 'lt'
+Ttl[NUM=sg,SEX=f,+abbr] -> 'lt'
+Ttl[NUM=sg,SEX=m] -> 'lieutenant'
+Ttl[NUM=sg,SEX=f] -> 'lieutenant'
+Ttl[NUM=sg,SEX=m,+abbr] -> 'lt' 'col'
+Ttl[NUM=sg,SEX=f,+abbr] -> 'lt' 'col'
+Ttl[NUM=sg,SEX=m] -> 'lieutenant' 'colonel'
+Ttl[NUM=sg,SEX=f] -> 'lieutenant' 'colonel'
+Ttl[NUM=sg,SEX=m,+abbr] -> 'col'
+Ttl[NUM=sg,SEX=f,+abbr] -> 'col'
+Ttl[NUM=sg,SEX=m] -> 'colonel'
+Ttl[NUM=sg,SEX=f] -> 'colonel'
+Ttl[NUM=sg,SEX=m,+abbr] -> 'gen'
+Ttl[NUM=sg,SEX=f,+abbr] -> 'gen'
+Ttl[NUM=sg,SEX=m] -> 'general'
+Ttl[NUM=sg,SEX=f] -> 'general'
+
+################################################################################
+#                                 Verb Particles                               #
+################################################################################
+
+Particle[PTCL=_s] -> "'s"
+Particle[PTCL=about] -> "about"
+Particle[PTCL=after] -> "after"
+Particle[PTCL=against] -> "against"
+Particle[PTCL=among] -> "among"
+Particle[PTCL=apart] -> "apart"
+Particle[PTCL=as] -> "as"
+Particle[PTCL=at] -> "at"
+Particle[PTCL=away] -> "away"
+Particle[PTCL=be] -> "be"
+Particle[PTCL=before] -> "before"
+Particle[PTCL=between] -> "between"
+Particle[PTCL=by] -> "by"
+Particle[PTCL=concerning] -> "concerning"
+Particle[PTCL=down] -> "down"
+Particle[PTCL=for] -> "for"
+Particle[PTCL=from] -> "from"
+Particle[PTCL=in] -> "in"
+Particle[PTCL=in_between] -> "in" "between"
+Particle[PTCL=into] -> "into"
+Particle[PTCL=like] -> "like"
+Particle[PTCL=of] -> "of"
+Particle[PTCL=off] -> "off"
+Particle[PTCL=on] -> "on"
+Particle[PTCL=onto] -> "onto"
+Particle[PTCL=out] -> "out"
+Particle[PTCL=out_of] -> "out" "of"
+Particle[PTCL=over] -> "over"
+Particle[PTCL=regarding] -> "regarding"
+Particle[PTCL=respecting] -> "respecting"
+Particle[PTCL=through] -> "through"
+Particle[PTCL=to] -> "to"
+Particle[PTCL=together] -> "together"
+Particle[PTCL=towards] -> "towards"
+Particle[PTCL=under] -> "under"
+Particle[PTCL=until] -> "until"
+Particle[PTCL=up] -> "up"
+Particle[PTCL=upon] -> "upon"
+Particle[PTCL=way] -> "way"
+Particle[PTCL=with] -> "with"
+
+################################################################################
+#                                  Prepositions                                #
+################################################################################
+
+Prep[TYP=special] -> 'of'
+Prep[TYP=conjunctive] -> 'with'
+Prep[TYP=conjunctive] -> 'without'
+Prep[TYP=temporal] -> 'after'
+Prep[TYP=temporal] -> 'before'
+Prep[TYP=temporal] -> 'during'
+Prep[TYP=temporal] -> 'circa'
+Prep[TYP=temporal] -> 'prior' 'to'
+Prep[TYP=temporal] -> 'till'
+Prep[TYP=temporal] -> 'until'
+Prep[TYP=spatial,+loc] -> 'about'
+Prep[TYP=spatial,+loc] -> 'above'
+Prep[TYP=spatial,+loc] -> 'against'
+Prep[TYP=spatial,+loc] -> 'along'
+Prep[TYP=spatial,+loc] -> 'alongside'
+Prep[TYP=spatial,+loc] -> 'amid'
+Prep[TYP=spatial,+loc] -> 'among'
+Prep[TYP=spatial,+loc] -> 'amongst'
+Prep[TYP=spatial,+loc] -> 'around'
+Prep[TYP=spatial,+loc] -> 'astride'
+Prep[TYP=spatial,+loc] -> 'aboard'
+Prep[TYP=spatial,+loc] -> 'at'
+Prep[TYP=spatial,+loc] -> 'athwart'
+Prep[TYP=spatial,+loc] -> 'atop'
+Prep[TYP=spatial,+loc] -> 'before'
+Prep[TYP=spatial,+loc] -> 'behind'
+Prep[TYP=spatial,+loc] -> 'below'
+Prep[TYP=spatial,+loc] -> 'beneath'
+Prep[TYP=spatial,+loc] -> 'beside'
+Prep[TYP=spatial,+loc] -> 'between'
+Prep[TYP=spatial,+loc] -> 'beyond'
+Prep[TYP=spatial,+loc] -> 'by'
+Prep[TYP=spatial,+loc] -> 'from'
+Prep[TYP=spatial,+loc] -> 'in'
+Prep[TYP=spatial,+loc] -> 'in' 'front' 'of'
+Prep[TYP=spatial,+loc] -> 'inside'
+Prep[TYP=spatial,+loc] -> 'near'
+Prep[TYP=spatial,+loc] -> 'next' 'to'
+Prep[TYP=spatial,+loc] -> 'off'
+Prep[TYP=spatial,+loc] -> 'on'
+Prep[TYP=spatial,+loc] -> 'opposite'
+Prep[TYP=spatial,+loc] -> 'out' 'of'
+Prep[TYP=spatial,+loc] -> 'outside'
+Prep[TYP=spatial,+loc] -> 'over'
+Prep[TYP=spatial,+loc] -> 'round'
+Prep[TYP=spatial,+loc] -> 'throughout'
+Prep[TYP=spatial,+loc] -> 'under'
+Prep[TYP=spatial,+loc] -> 'underneath'
+Prep[TYP=spatial,+loc] -> 'upon'
+Prep[TYP=spatial,+loc] -> 'within'
+Prep[TYP=spatial,+path,+src] -> 'from'
+Prep[TYP=spatial,+path,+src] -> 'out'
+Prep[TYP=spatial,+path,+src] -> 'out' 'of'
+Prep[TYP=spatial,+path,+src] -> 'off'
+Prep[TYP=spatial,+path,+src] -> 'off' 'of'
+Prep[TYP=spatial,+path,+dir] -> 'across'
+Prep[TYP=spatial,+path,+dir] -> 'along'
+Prep[TYP=spatial,+path,+dir] -> 'around'
+Prep[TYP=spatial,+path,+dir] -> 'down'
+Prep[TYP=spatial,+path,+dir] -> 'over'
+Prep[TYP=spatial,+path,+dir] -> 'past'
+Prep[TYP=spatial,+path,+dir] -> 'round'
+Prep[TYP=spatial,+path,+dir] -> 'through'
+Prep[TYP=spatial,+path,+dir] -> 'towards'
+Prep[TYP=spatial,+path,+dir] -> 'up'
+Prep[TYP=spatial,+path,+dest,+dest_dir] -> 'for'
+Prep[TYP=spatial,+path,+dest,+dest_dir] -> 'at'
+Prep[TYP=spatial,+path,+dest,+dest_dir] -> 'to'
+Prep[TYP=spatial,+path,+dest,+dest_dir] -> 'towards'
+Prep[TYP=spatial,+path,+dest,+dest_conf] -> 'into'
+Prep[TYP=spatial,+path,+dest,+dest_conf] -> 'onto'
+
+################################################################################
+#                                   Puctuation                                 #
+################################################################################
+
+Pnct[TYP=end] -> '.' | '...' | '!'
+Pnct[TYP=qst] -> '?' | '?!'
+Pnct[TYP=com] -> ',' | ';'
+
+################################################################################
+#                                  Conditionals                                #
+################################################################################
+
+Cond -> 'if'
+Cond -> 'when'
+Cond -> 'whenever'
+Cond -> 'given'
+Cond -> 'given' 'that'
+Cond -> 'as' 'long' 'as'
+Cond -> 'assuming'
+Cond -> 'provided'
+Cond -> 'since'
+Cond -> 'supposing'
+
+################################################################################
+#                                    Articles                                  #
+################################################################################
+
+Art[NUM=sg,-definite] -> 'a'
+Art[NUM=sg,-definite] -> 'an'
+Art[NUM=sg,+definite] -> 'the'
+Art[NUM=ms,+definite] -> 'the'
+Art[NUM=pl,+definite] -> 'the'
+
+################################################################################
+#                                  Determiners                                 #
+################################################################################
+
+Det[NUM=sg,DETTYP=dem] -> 'this'
+Det[NUM=sg,DETTYP=dem] -> 'that'
+Det[NUM=pl,DETTYP=dem] -> 'these'
+Det[NUM=pl,DETTYP=dem] -> 'those'
+Det[DETTYP=exst] -> 'some'
+Det[NUM=pl,DETTYP=exst] -> 'certain'
+Det[NUM=pl,DETTYP=exst] -> 'several'
+Det[DETTYP=alt] -> 'another'
+Det[NUM=pl,DETTYP=deg,SEM=pos] -> 'most'
+Det[NUM=pl,DETTYP=deg,SEM=pos] -> 'a' 'lot' 'of'
+Det[NUM=pl,DETTYP=deg,SEM=pos] -> 'many'
+Det[NUM=pl,DETTYP=deg,SEM=neg] -> 'few'
+Det[NUM=pl,DETTYP=deg,SEM=zero] -> 'several'
+Det[NUM=pl,DETTYP=deg,SEM=zero] -> 'a' 'few'
+Det[NUM=ms,DETTYP=deg,SEM=zero] -> 'a' 'little'
+Det[NUM=ms,DETTYP=deg,SEM=pos] -> 'a' 'lot' 'of'
+Det[NUM=ms,DETTYP=deg,SEM=pos] -> 'most'
+Det[NUM=ms,DETTYP=deg,SEM=pos] -> 'much'
+Det[NUM=ms,DETTYP=deg,SEM=neg] -> 'little'
+Det[NUM=sg,DETTYP=unvrs] -> 'any'
+Det[NUM=ms,DETTYP=unvrs] -> 'any'
+Det[NUM=pl,DETTYP=unvrs] -> 'all'
+Det[NUM=ms,DETTYP=unvrs] -> 'all'
+Det[NUM=sg,DETTYP=unvrs] -> 'every'
+Det[NUM=sg,DETTYP=unvrs] -> 'each'
+Det[DETTYP=neg] -> 'no'
+Det[NUM=pl,DETTYP=neg] -> 'none' 'of' 'the'
+
+################################################################################
+#                                    Pronouns                                  #
+################################################################################
+
+Pro[PER=1,NUM=sg,CASE=sbj] -> 'i'
+Pro[PER=1,NUM=sg,CASE=obj] -> 'me'
+Pro[PER=1,NUM=sg,CASE=poss_det] -> 'my'
+Pro[PER=1,NUM=sg,CASE=poss_pred] -> 'mine'
+Pro[PER=1,NUM=sg,CASE=rflx] -> 'myself'
+
+Pro[PER=1,NUM=pl,CASE=sbj] -> 'we'
+Pro[PER=1,NUM=pl,CASE=obj] -> 'us'
+Pro[PER=1,NUM=pl,CASE=poss_det] -> 'our'
+Pro[PER=1,NUM=pl,CASE=poss_pred] -> 'ours'
+Pro[PER=1,NUM=pl,CASE=rflx] -> 'ourself'
+
+Pro[PER=2,CASE=sbj] -> 'you'
+Pro[PER=2,CASE=obj] -> 'you'
+Pro[PER=2,CASE=poss_det] -> 'your'
+Pro[PER=2,CASE=poss_pred] -> 'yours'
+Pro[PER=2,CASE=rflx] -> 'yourself'
+
+Pro[PER=3,NUM=sg,CASE=sbj,SEX=m] -> 'he'
+Pro[PER=3,NUM=sg,CASE=obj,SEX=m] -> 'him'
+Pro[PER=3,NUM=sg,CASE=poss_det,SEX=m] -> 'his'
+Pro[PER=3,NUM=sg,CASE=poss_pred,SEX=m] -> 'his'
+Pro[PER=3,NUM=sg,CASE=rflx,SEX=m] -> 'himself'
+
+Pro[PER=3,NUM=sg,CASE=sbj,SEX=f] -> 'she'
+Pro[PER=3,NUM=sg,CASE=obj,SEX=f] -> 'her'
+Pro[PER=3,NUM=sg,CASE=poss_det,SEX=f] -> 'her'
+Pro[PER=3,NUM=sg,CASE=poss_pred,SEX=f] -> 'hers'
+Pro[PER=3,NUM=sg,CASE=rflx,SEX=f] -> 'herself'
+
+Pro[PER=3,NUM=sg,CASE=poss_det] -> 'one' "'s"
+Pro[PER=3,NUM=sg,CASE=rflx] -> 'oneself'
+
+Pro[PER=3,NUM=sg,CASE=sbj,SEX=n] -> 'it'
+Pro[PER=3,NUM=sg,CASE=obj,SEX=n] -> 'it'
+Pro[PER=3,NUM=sg,CASE=poss_det,SEX=n] -> 'its'
+Pro[PER=3,NUM=sg,CASE=poss_pred,SEX=n] -> 'its'
+Pro[PER=3,NUM=sg,CASE=rflx,SEX=n] -> 'itself'
+
+Pro[PER=3,NUM=pl,CASE=sbj] -> 'they'
+Pro[PER=3,NUM=pl,CASE=obj] -> 'them'
+Pro[PER=3,NUM=pl,CASE=poss_det] -> 'their'
+Pro[PER=3,NUM=pl,CASE=poss_pred] -> 'their'
+Pro[PER=3,NUM=pl,CASE=rflx] -> 'themselves'
+
+################################################################################
+#                                     Verbs                                    #
+################################################################################
+
+# Be: forms
+Verb[FORM=inf,PTRN=-1,FRQ=100] -> "be"
+Verb[FORM=tps,PTRN=-1,FRQ=100] -> "is"
+Verb[FORM=ger,PTRN=-1,FRQ=100] -> "being"
+Verb[FORM=pret,PTRN=-1,FRQ=100] -> "was"
+Verb[FORM=pp,PTRN=-1,FRQ=100] -> "been"
+
+# Be: present
+AuxV[SEM=pos,TENS=r,PER=1,NUM=sg,TYP=be] -> "am"
+AuxV[SEM=pos,TENS=r,PER=1,NUM=ms,TYP=be] -> "am"
+AuxV[SEM=pos,TENS=r,PER=1,NUM=sg,TYP=be] -> "'m"
+AuxV[SEM=pos,TENS=r,PER=1,NUM=ms,TYP=be] -> "'m"
+AuxV[SEM=neg,TENS=r,PER=1,NUM=sg,TYP=be] -> "am" "not"
+AuxV[SEM=neg,TENS=r,PER=1,NUM=ms,TYP=be] -> "am" "not"
+AuxV[SEM=pos,TENS=r,PER=2,NUM=sg,TYP=be] -> "are"
+AuxV[SEM=pos,TENS=r,PER=2,NUM=sg,TYP=be] -> "'re"
+AuxV[SEM=neg,TENS=r,PER=2,NUM=sg,TYP=be] -> "are" "not"
+AuxV[SEM=neg,TENS=r,PER=2,NUM=sg,TYP=be] -> "aren" "'t"
+AuxV[SEM=pos,TENS=r,PER=3,NUM=sg,TYP=be] -> "is"
+AuxV[SEM=pos,TENS=r,PER=3,NUM=ms,TYP=be] -> "is"
+AuxV[SEM=pos,TENS=r,PER=3,NUM=sg,TYP=be] -> "'s"
+AuxV[SEM=pos,TENS=r,PER=3,NUM=ms,TYP=be] -> "'s"
+AuxV[SEM=neg,TENS=r,PER=3,NUM=sg,TYP=be] -> "is" "not"
+AuxV[SEM=neg,TENS=r,PER=3,NUM=ms,TYP=be] -> "is" "not"
+AuxV[SEM=neg,TENS=r,PER=3,NUM=sg,TYP=be] -> "isn" "'t"
+AuxV[SEM=neg,TENS=r,PER=3,NUM=ms,TYP=be] -> "isn" "'t"
+AuxV[SEM=pos,TENS=r,NUM=pl,TYP=be] -> "are"
+AuxV[SEM=neg,TENS=r,NUM=pl,TYP=be] -> "are" "not"
+AuxV[SEM=neg,TENS=r,NUM=pl,TYP=be] -> "aren" "'t"
+
+# Be: past
+AuxV[SEM=pos,TENS=p,NUM=sg,TYP=be] -> "was"
+AuxV[SEM=pos,TENS=p,NUM=ms,TYP=be] -> "was"
+AuxV[SEM=neg,TENS=p,NUM=sg,TYP=be] -> "was" "not"
+AuxV[SEM=neg,TENS=p,NUM=ms,TYP=be] -> "was" "not"
+AuxV[SEM=neg,TENS=p,NUM=sg,TYP=be] -> "wasn" "'t"
+AuxV[SEM=neg,TENS=p,NUM=ms,TYP=be] -> "wasn" "'t"
+AuxV[SEM=pos,TENS=p,NUM=pl,TYP=be] -> "were"
+AuxV[SEM=neg,TENS=p,NUM=pl,TYP=be] -> "were" "not"
+AuxV[SEM=neg,TENS=p,NUM=pl,TYP=be] -> "weren" "'t"
+
+# Do: forms
+Verb[FORM=inf,PTRN=-2,FRQ=100] -> "do"
+Verb[FORM=tps,PTRN=-2,FRQ=100] -> "does"
+Verb[FORM=ger,PTRN=-2,FRQ=100] -> "doing"
+Verb[FORM=pret,PTRN=-2,FRQ=100] -> "did"
+Verb[FORM=pp,PTRN=-2,FRQ=100] -> "done"
+
+# Do: present
+AuxV[SEM=pos,TENS=r,PER=3,NUM=sg,TYP=do] -> "does"
+AuxV[SEM=pos,TENS=r,PER=3,NUM=ms,TYP=do] -> "does"
+AuxV[SEM=neg,TENS=r,PER=3,NUM=sg,TYP=do] -> "does" "not"
+AuxV[SEM=neg,TENS=r,PER=3,NUM=ms,TYP=do] -> "does" "not"
+AuxV[SEM=neg,TENS=r,PER=3,NUM=sg,TYP=do] -> "doesn" "'t"
+AuxV[SEM=neg,TENS=r,PER=3,NUM=ms,TYP=do] -> "doesn" "'t"
+AuxV[SEM=pos,TENS=r,NUM=sg,TYP=do] -> "do"
+AuxV[SEM=pos,TENS=r,NUM=ms,TYP=do] -> "do"
+AuxV[SEM=pos,TENS=r,NUM=pl,TYP=do] -> "do"
+AuxV[SEM=neg,TENS=r,NUM=sg,TYP=do] -> "do" "not"
+AuxV[SEM=neg,TENS=r,NUM=ms,TYP=do] -> "do" "not"
+AuxV[SEM=neg,TENS=r,NUM=pl,TYP=do] -> "do" "not"
+AuxV[SEM=neg,TENS=r,NUM=sg,TYP=do] -> "don" "'t"
+AuxV[SEM=neg,TENS=r,NUM=ms,TYP=do] -> "don" "'t"
+AuxV[SEM=neg,TENS=r,NUM=pl,TYP=do] -> "don" "'t"
+
+# Do: past
+AuxV[SEM=pos,TENS=p,TYP=do] -> "did"
+AuxV[SEM=neg,TENS=p,TYP=do] -> "did" "not"
+AuxV[SEM=neg,TENS=p,TYP=do] -> "didn" "'t"
+
+# Have: forms
+Verb[FORM=inf,PTRN=-3,FRQ=100] -> "have"
+Verb[FORM=tps,PTRN=-3,FRQ=100] -> "has"
+Verb[FORM=ger,PTRN=-3,FRQ=100] -> "having"
+Verb[FORM=pret,PTRN=-3,FRQ=100] -> "had"
+Verb[FORM=pp,PTRN=-3,FRQ=100] -> "had"
+
+# Have: present
+AuxV[SEM=pos,TENS=r,PER=3,NUM=sg,TYP=have] -> "has"
+AuxV[SEM=pos,TENS=r,PER=3,NUM=ms,TYP=have] -> "has"
+AuxV[SEM=neg,TENS=r,PER=3,NUM=sg,TYP=have] -> "has" "not"
+AuxV[SEM=neg,TENS=r,PER=3,NUM=ms,TYP=have] -> "has" "not"
+AuxV[SEM=neg,TENS=r,PER=3,NUM=sg,TYP=have] -> "hasn" "'t"
+AuxV[SEM=neg,TENS=r,PER=3,NUM=ms,TYP=have] -> "hasn" "'t"
+AuxV[SEM=pos,TENS=r,NUM=sg,TYP=have] -> "have"
+AuxV[SEM=pos,TENS=r,NUM=ms,TYP=have] -> "have"
+AuxV[SEM=pos,TENS=r,NUM=pl,TYP=have] -> "have"
+AuxV[SEM=neg,TENS=r,NUM=sg,TYP=have] -> "have" "not"
+AuxV[SEM=neg,TENS=r,NUM=pl,TYP=have] -> "have" "not"
+AuxV[SEM=neg,TENS=r,NUM=ms,TYP=have] -> "have" "not"
+AuxV[SEM=neg,TENS=r,NUM=sg,TYP=have] -> "haven" "'t"
+AuxV[SEM=neg,TENS=r,NUM=ms,TYP=have] -> "haven" "'t"
+AuxV[SEM=neg,TENS=r,NUM=pl,TYP=have] -> "haven" "'t"
+
+# Have: past
+AuxV[SEM=pos,TENS=p,TYP=have] -> "had"
+AuxV[SEM=neg,TENS=p,TYP=have] -> "had" "not"
+AuxV[SEM=neg,TENS=p,TYP=have] -> "hadn" "'t"

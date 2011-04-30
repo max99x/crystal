@@ -1,0 +1,247 @@
+interrogative determiner
+  which
+  what
+  whose
+interrogative pronoun
+  who
+  whom
+  what
+  which
+interrogative pro-adverb
+  where .. Prep
+pro-verb
+  do
+  happen?
+
+## TENSES: g, i, ip // r, rc, rp, p
+## FORMS: inf, tps, ger, pret, pp
+
+Subject
+  What is a dog?
+  What is smart?
+  What is fluffier than the cat?
+  What are the cats?
+  Who is smart?
+  *Who am I?
+  *Who is he?
+  *Who are they?
+  ***r:Who/What VP
+  
+  What causes that?
+  What fell?
+  Who traveled to Ireland?
+  
+  Who gives Lara the books?
+  Who is giving Lara the books?
+  Who gave Lara the books?
+  Who has given Lara the books?
+  ***r:Who/What VP
+Direct Object
+  ->Alice took the book.
+  ?the book
+  What does Alice take?
+  What did Alice take?
+  What is Alice taking?
+  What has Alice taken?
+
+  ->The students gave Lara the homeworks.
+  ?the homewarks
+  What do the students give Lara?
+  What did the students give Lara?
+  What are the students giving Lara?
+  What have the students given Lara?
+  ?Lara
+  Who[m] do the students give the homeworks?
+  Who[m] did the students give the homeworks?
+  Who[m] are the students giving the homeworks?
+  Who[m] have the students given the homeworks?
+
+  ->Alice saw Jack.
+  ?Jack
+  Who[m] does Alice see?
+  Who[m] did Alice see?
+  Who[m] is Alice seeing?
+  Who[m] has Alice seen?
+
+  ->Alice introduced Jack to Bob.
+  ?Jack
+  Who[m] does Alice introduce to Bob?
+  Who[m] did Alice introduce to Bob?
+  Who[m] is Alice introducing to Bob?
+  Who[m] has Alice introduced to Bob?
+  ?Bob
+  Who[m] does Alice introduce Jack to?
+  Who[m] did Alice introduce Jack to?
+  Who[m] is Alice introducing Jack to?
+  Who[m] has Alice introduced Jack to?
+  ?Bob
+  To whom does Alice introduce Jack?
+  To whom did Alice introduce Jack?
+  To whom is Alice introducing Jack?
+  To whom has Alice introduced Jack?
+
+  ->Alice sold Mary the pen for a fortune.
+  S  V O1 O2 for O3
+  ?Mary
+  Q Aux S  V O2 for O3
+  Whom does Alice sell the pen [for a fortune]?
+  Whom did Alice sell the pen [for a fortune]?
+  Whom is Alice selling the pen [for a fortune]?
+  Whom has Alice sold the pen [for a fortune]?
+  ?the pen
+  Q Aux S  V O1 for O3
+  What does Alice sell Mary for a fortune?
+  What did Alice sell Mary for a fortune?
+  What is Alice selling Mary for a fortune?
+  What has Alice sold Mary for a fortune?
+  Q Aux S  V O1 O2 for
+  What does Alice sell Mary the pen for?
+  What did Alice sell Mary the pen for?
+  What is Alice selling Mary the pen for?
+  What has Alice sold Mary the pen for?
+  ?a fortune
+  for Q Aux S  V O1 O2
+  For what does Alice sell Mary the pen?
+  For what did Alice sell Mary the pen?
+  For what is Alice selling Mary the pen?
+  For what has Alice sold Mary the pen?
+  
+  VP[NUM=?n,PER=?p,TENS=?t] -> CV[PTRN=45,NUM=?n,PER=?p,TENS=?t] NP1 NP2 "at" NP3
+  Alice sold Mary the pen for a fortune.
+  QVP[NUM=?n,PER=?p,TENS=?t,TRGT=1,PREP=NULL] -> CV[PTRN=45,NUM=?n,PER=?p,TENS=?t] NP2 "at" NP3
+  QVP[NUM=?n,PER=?p,TENS=?t,TRGT=2,PREP=NULL] -> CV[PTRN=45,NUM=?n,PER=?p,TENS=?t] NP1 "at" NP3
+  QVP[NUM=?n,PER=?p,TENS=?t,TRGT=3,PREP=NULL] -> CV[PTRN=45,NUM=?n,PER=?p,TENS=?t] NP1 NP2 "at"
+  QVP[NUM=?n,PER=?p,TENS=?t,TRGT=3,PREP=at] -> CV[PTRN=45,NUM=?n,PER=?p,TENS=?t] NP1 NP2
+  
+  VP[NUM=?n,PER=?p,TENS=?t] -> CV[PTRN=30,NUM=?n,PER=?p,TENS=?t] NP1 "to" NP2 "in" NP3
+  Jennifer baked the potatoes to a crisp in the oven.
+  QVP[NUM=?n,PER=?p,TENS=?t,TRGT=1,PREP=NULL] -> CV[PTRN=30,NUM=?n,PER=?p,TENS=?t] "to" NP2 "in" NP3
+  QVP[NUM=?n,PER=?p,TENS=?t,TRGT=2,PREP=NULL] -> CV[PTRN=30,NUM=?n,PER=?p,TENS=?t] NP1 "to" "in" NP3
+  QVP[NUM=?n,PER=?p,TENS=?t,TRGT=2,PREP=to] -> CV[PTRN=30,NUM=?n,PER=?p,TENS=?t] NP1 "in" NP3
+  QVP[NUM=?n,PER=?p,TENS=?t,TRGT=3,PREP=NULL] -> CV[PTRN=30,NUM=?n,PER=?p,TENS=?t] NP1 "to" NP2 "in"
+  QVP[NUM=?n,PER=?p,TENS=?t,TRGT=3,PREP=in] -> CV[PTRN=30,NUM=?n,PER=?p,TENS=?t] NP1 "to" NP2
+
+  VP[NUM=?n,PER=?p,TENS=?t] -> CV[PTRN=97,NUM=?n,PER=?p,TENS=?t] Prep[TYP=spatial,+src] NP
+  She comes from Ireland.
+  QVP[NUM=?n,PER=?p,TENS=?t,TRGT=1,PREP=NULL] -> CV[PTRN=97,NUM=?n,PER=?p,TENS=?t] Prep[TYP=spatial,+src]
+  QVP[NUM=?n,PER=?p,TENS=?t,TRGT=1,PREP=RESTRICT,+src] -> CV[PTRN=97,NUM=?n,PER=?p,TENS=?t]
+
+  VP[NUM=?n,PER=?p,TENS=?t] -> CV[PTRN=5,NUM=?n,PER=?p,TENS=?t] NP "up"
+  She spruced herself up
+  QVP[NUM=?n,PER=?p,TENS=?t,TRGT=1,PREP=NULL,+src] -> CV[PTRN=5,NUM=?n,PER=?p,TENS=?t] "up"
+  
+PP
+  ->Alice took the dog to the woods at the edge of the town.
+  ?the town
+  To the woods at the edge of what did Alice take the dog?
+  ?the woods at the edge of the town
+  To what did Alice take the dog?
+  What did Alice take the dog to?
+  ?to the woods at the edge of the town
+  Where did Alice take the dog?
+  ->Alice is in the room.
+  ?the room
+  In what is Alice?
+  What is Alice in?
+  ?in the room
+  Where is Alice?
+  
+
+YN
+  Alice is smart?
+  The dogs were gnawing on the bones?
+  ***S[dcl] ?
+  
+  Is Alice smart?
+  Is Alice being smart?
+  Was Alice smart?
+  Has Alice been smart?
+  Is Alice not smart?
+  Is Alice smarter than Mary?
+  Is Alice in the room?
+  Are they hungry?
+  ***r:CV[tens=r,sem=pos,v=be,num,per] NP[num,per]-sbj {not} Predicate
+  ***rc:CV[tens=r,sem=pos,v=be,num,per] NP[num,per]-sbj being {not} Predicate
+  ***rp:CV[tens=r,sem=pos,v=have,num,per] NP[num,per]-sbj been {not} Predicate
+  ***p:CV[tens=p,sem=pos,v=be,num,per] NP[num,per]-sbj {not} Predicate
+  
+  Does Alice dance?
+  Is Alice dancing?
+  Did Alice dance?
+  Has Alice danced?
+  Does Alice not dance?
+  Do they give Jack the letters?
+  Are they giving Jack the letters?
+  Did they give Jack the letters?
+  Have they given Jack the letters?
+  Am I dancing?
+  ***r:CV[tens=r,sem=pos,v=do,num,per] NP[num,per]-sbj VP[tens=i]
+  ***rc:CV[tens=r,sem=pos,v=be,num,per] NP[num,per]-sbj VP[tens=g]
+  ***rp:CV[tens=r,sem=pos,v=have,num,per] NP[num,per]-sbj VP[tens=ip]
+  ***p:CV[tens=p,sem=pos,v=do,num,per] NP[num,per]-sbj VP[tens=i]
+
+
+
+Statement
+  (S[PTRN=?pt, RUL=1, TYP='dcl']
+    (NP[NUM='sg', PER=3, RUL=310]
+      (PN[NUM='sg', RUL=602, SEX='f']
+        (PrpN[AMBG=-299, NUM='sg', SEX='f'] mary)))
+    (VP[NUM=?n, PER=?p, TENS='p']
+      (CV[PTRN=134, SEM='pos', TENS='p']
+        (Verb[CLS='give-13.1', FORM='pret', FRQ=179, PTRN=134, SNS='give.v.01']
+          gave))
+      (NP[NUM='sg', PER=3, RUL=310]
+        (PN[NUM='sg', RUL=602, SEX='f']
+          (PrpN[AMBG=0, NUM='sg', SEX='f'] lara)))
+      (NP[NUM='sg', PER=3, RUL=309]
+        (DT[NUM='sg', RUL=401, -definite, -poss]
+          (Art[NUM='sg', -definite] a))
+        (Noun[FRQ=0, NUM='sg', SEX='n', SNS='candelabrum.n.01']
+          candelabra))))
+  [s_Mary, s_Lara, e3, s4 | give.v.01(e3), _Agent(e3, s_Mary), _Recipient(e3, s_Lara), candelabrum.n.01(s4), _Theme(e3, s4)]
+Question(NP1)
+  (S[RUL=12, TYP='whq']
+    (Q[RUL=901, -sbj] whom)
+    (AuxV[SEM='pos', TENS='p', TYP='do'] did)
+    (NP[NUM='sg', PER=3, RUL=310]
+      (PN[NUM='sg', RUL=602, SEX='f']
+        (PrpN[AMBG=-299, NUM='sg', SEX='f'] mary)))
+    (VPQ[NUM=?n, PER=?p, PTCL='NONE', TENS='i', TRGT=3]
+      (CV[PTRN=134, SEM='pos', TENS='i']
+        (Verb[CLS='give-13.1', FORM='inf', FRQ=179, PTRN=134, SNS='give.v.01']
+          give))
+      (NP[NUM='sg', PER=3, RUL=309]
+        (DT[NUM='sg', RUL=401, -definite, -poss]
+          (Art[NUM='sg', -definite] a))
+        (Noun[FRQ=0, NUM='sg', SEX='n', SNS='candelabrum.n.01']
+          candelabra))))
+Question(NP2)
+  (S[RUL=12, TYP='whq']
+    (Q[RUL=901, -sbj] whom)
+    (AuxV[SEM='pos', TENS='p', TYP='do'] did)
+    (NP[NUM='sg', PER=3, RUL=310]
+      (PN[NUM='sg', RUL=602, SEX='f']
+        (PrpN[AMBG=-299, NUM='sg', SEX='f'] mary)))
+    (VPQ[NUM=?n, PER=?p, PTCL='NONE', TENS='i', TRGT=2]
+      (CV[PTRN=134, SEM='pos', TENS='i']
+        (Verb[CLS='give-13.1', FORM='inf', FRQ=179, PTRN=134, SNS='give.v.01']
+          give))
+      (NP[NUM='sg', PER=3, RUL=310]
+        (PN[NUM='sg', RUL=602, SEX='f']
+          (PrpN[AMBG=0, NUM='sg', SEX='f'] lara)))))
+Question(NP2/Prep)
+  (S[RUL=12, TYP='whq']
+    (Q[RUL=901, +sbj] what)
+    (AuxV[SEM='pos', TENS='p', TYP='do'] did)
+    (NP[NUM='sg', PER=3, RUL=310]
+      (PN[NUM='sg', RUL=602, SEX='f']
+        (PrpN[AMBG=-299, NUM='sg', SEX='f'] mary)))
+    (VPQ[NUM=?n, PER=?p, PTCL='NONE', TENS='i', TRGT=2]
+      (CV[PTRN=37, SEM='pos', TENS='i']
+        (Verb[CLS='give-13.1', FORM='inf', FRQ=179, PTRN=37, SNS='give.v.01']
+          give))
+      to
+      (NP[NUM='sg', PER=3, RUL=310]
+        (PN[NUM='sg', RUL=602, SEX='f']
+          (PrpN[AMBG=0, NUM='sg', SEX='f'] lara)))))

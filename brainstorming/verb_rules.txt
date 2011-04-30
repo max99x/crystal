@@ -1,0 +1,84 @@
+Verb[FORM=(inf, tps, pret, pp, ger),PTRN=...,ROOT=...] -> terminal
+
+# Present (to be)
+CV[SEM=pos,TENS=r,PERS=1,NUM=sg,PTRN=0,ROOT=be] -> "am"
+CV[SEM=pos,TENS=r,PERS=1,NUM=ms,PTRN=0,ROOT=be] -> "am"
+CV[SEM=neg,TENS=r,PERS=1,NUM=sg,PTRN=0,ROOT=be] -> "am" "not"
+CV[SEM=neg,TENS=r,PERS=1,NUM=ms,PTRN=0,ROOT=be] -> "am" "not"
+CV[SEM=pos,TENS=r,PERS=3,NUM=sg,PTRN=0,ROOT=be] -> "is"
+CV[SEM=pos,TENS=r,PERS=3,NUM=ms,PTRN=0,ROOT=be] -> "is"
+CV[SEM=neg,TENS=r,PERS=3,NUM=sg,PTRN=0,ROOT=be] -> "is" "not"
+CV[SEM=neg,TENS=r,PERS=3,NUM=ms,PTRN=0,ROOT=be] -> "is" "not"
+CV[SEM=neg,TENS=r,PERS=3,NUM=sg,PTRN=0,ROOT=be] -> "isn" "'t"
+CV[SEM=neg,TENS=r,PERS=3,NUM=ms,PTRN=0,ROOT=be] -> "isn" "'t"
+CV[SEM=pos,TENS=r,NUM=pl,PTRN=0,ROOT=be] -> "are"
+CV[SEM=neg,TENS=r,NUM=pl,PTRN=0,ROOT=be] -> "are" "not"
+CV[SEM=neg,TENS=r,NUM=pl,PTRN=0,ROOT=be] -> "aren" "'t"
+
+# Past (to be)
+CV[SEM=pos,TENS=p,PERS=3,NUM=sg,PTRN=0,ROOT=be] -> "was"
+CV[SEM=pos,TENS=p,PERS=3,NUM=ms,PTRN=0,ROOT=be] -> "was"
+CV[SEM=neg,TENS=p,PERS=3,NUM=sg,PTRN=0,ROOT=be] -> "was" "not"
+CV[SEM=neg,TENS=p,PERS=3,NUM=ms,PTRN=0,ROOT=be] -> "was" "not"
+CV[SEM=neg,TENS=p,PERS=3,NUM=sg,PTRN=0,ROOT=be] -> "wasn" "'t"
+CV[SEM=neg,TENS=p,PERS=3,NUM=ms,PTRN=0,ROOT=be] -> "wasn" "'t"
+CV[SEM=pos,TENS=p,NUM=pl,PTRN=0,ROOT=be] -> "were"
+CV[SEM=neg,TENS=p,NUM=pl,PTRN=0,ROOT=be] -> "were" "not"
+CV[SEM=neg,TENS=p,NUM=pl,PTRN=0,ROOT=be] -> "weren" "'t"
+
+# Present
+CV[SEM=pos,TENS=r,PTRN=?t,ROOT=?r] -> Verb[FORM=inf,PTRN=?t,ROOT=?r]
+CV[SEM=pos,TENS=r,PERS=3,NUM=sg,PTRN=?t,ROOT=?r] -> Verb[FORM=tps,PTRN=?t,ROOT=?r]
+CV[SEM=pos,TENS=r,PERS=3,NUM=ms,PTRN=?t,ROOT=?r] -> Verb[FORM=tps,PTRN=?t,ROOT=?r]
+CV[SEM=neg,TENS=r,PTRN=?t] -> "do" "not" Verb[FORM=inf,PTRN=?t,ROOT=?r]
+CV[SEM=neg,TENS=r,PTRN=?t] -> "don" "'t" Verb[FORM=inf,PTRN=?t,ROOT=?r]
+CV[SEM=pos,TENS=r,PERS=3,NUM=sg,PTRN=?t,ROOT=?r] -> "does" "not" Verb[FORM=inf,PTRN=?t,ROOT=?r]
+CV[SEM=pos,TENS=r,PERS=3,NUM=ms,PTRN=?t,ROOT=?r] -> "does" "not" Verb[FORM=inf,PTRN=?t,ROOT=?r]
+CV[SEM=pos,TENS=r,PERS=3,NUM=sg,PTRN=?t,ROOT=?r] -> "doesn" "'t" Verb[FORM=inf,PTRN=?t,ROOT=?r]
+CV[SEM=pos,TENS=r,PERS=3,NUM=ms,PTRN=?t,ROOT=?r] -> "doesn" "'t" Verb[FORM=inf,PTRN=?t,ROOT=?r]
+
+# Present Continuous
+CV[SEM=?s,TENS=rc,PERS=?p,NUM=?n,PTRN=?t,ROOT=?r] -> CV[SEM=?s,TENS=r,PERS=?p,NUM=?n,ROOT=be] Verb[FORM=ger,PTRN=?t,ROOT=?r]
+
+# Present Perfect
+CV[SEM=?s,TENS=rp,PERS=?p,NUM=?n,PTRN=?t,ROOT=?r] -> CV[SEM=?s,TENS=r,PERS=?p,NUM=?n,ROOT=have] Verb[FORM=pp,PTRN=?t,ROOT=?r]
+
+# Present Perfect Continuous
+CV[SEM=?s,TENS=rpc,PERS=?p,NUM=?n,PTRN=?t,ROOT=?r] -> CV[SEM=?s,TENS=r,PERS=?p,NUM=?n,ROOT=have] "been" Verb[FORM=ger,PTRN=?t,ROOT=?r]
+
+# Past
+CV[SEM=pos,TENS=p,PTRN=?t,ROOT=?r] -> Verb[FORM=pret,PTRN=?t,ROOT=?r]
+CV[SEM=neg,TENS=p,PTRN=?t,ROOT=?r] -> "did" "not" Verb[FORM=inf,PTRN=?t,ROOT=?r]
+CV[SEM=neg,TENS=p,PTRN=?t,ROOT=?r] -> "did" "'t" Verb[FORM=inf,PTRN=?t,ROOT=?r]
+
+# Past Continuous
+CV[SEM=?s,TENS=pc,PERS=?p,NUM=?n,PTRN=?t,ROOT=?r] -> CV[SEM=?s,TENS=p,PERS=?p,NUM=?n,ROOT=be] Verb[FORM=ger,PTRN=?t,ROOT=?r]
+
+# Past Perfect
+CV[SEM=?s,TENS=pc,PERS=?p,NUM=?n,PTRN=?t,ROOT=?r] -> CV[SEM=?s,TENS=p,PERS=?p,NUM=?n,ROOT=have] Verb[FORM=pp,PTRN=?t,ROOT=?r]
+
+# Past Perfect Continuous
+CV[SEM=?s,TENS=pc,PERS=?p,NUM=?n,PTRN=?t,ROOT=?r] -> CV[SEM=?s,TENS=p,PERS=?p,NUM=?n,ROOT=have] "been" Verb[FORM=ger,PTRN=?t,ROOT=?r]
+
+# Future
+CV[SEM=pos,TENS=f,PERS=?p,NUM=?n,PTRN=?t,ROOT=?r] -> "will" Verb[FORM=inf,PTRN=?t,ROOT=?r]
+CV[SEM=neg,TENS=f,PERS=?p,NUM=?n,PTRN=?t,ROOT=?r] -> "will" "not" Verb[FORM=inf,PTRN=?t,ROOT=?r]
+CV[SEM=neg,TENS=f,PERS=?p,NUM=?n,PTRN=?t,ROOT=?r] -> "won't" Verb[FORM=inf,PTRN=?t,ROOT=?r]
+
+# Future Continuous
+CV[SEM=pos,TENS=fc,PERS=?p,NUM=?n,PTRN=?t,ROOT=?r] -> "will" "be" Verb[FORM=ger,PTRN=?t,ROOT=?r]
+CV[SEM=neg,TENS=fc,PERS=?p,NUM=?n,PTRN=?t,ROOT=?r] -> "will" "not" "be" Verb[FORM=ger,PTRN=?t,ROOT=?r]
+CV[SEM=neg,TENS=fc,PERS=?p,NUM=?n,PTRN=?t,ROOT=?r] -> "won't" "be" Verb[FORM=ger,PTRN=?t,ROOT=?r]
+
+# Future Perfect
+CV[SEM=pos,TENS=fp,PERS=?p,NUM=?n,PTRN=?t,ROOT=?r] -> "will" "have" Verb[FORM=pp,PTRN=?t,ROOT=?r]
+CV[SEM=neg,TENS=fp,PERS=?p,NUM=?n,PTRN=?t,ROOT=?r] -> "will" "not" "have" Verb[FORM=pp,PTRN=?t,ROOT=?r]
+CV[SEM=neg,TENS=fp,PERS=?p,NUM=?n,PTRN=?t,ROOT=?r] -> "won't" "have" Verb[FORM=pp,PTRN=?t,ROOT=?r]
+
+# Future Perfect Continuous
+CV[SEM=pos,TENS=fpc,PERS=?p,NUM=?n,PTRN=?t,ROOT=?r] -> "will" "have" "been" Verb[FORM=ger,PTRN=?t,ROOT=?r]
+CV[SEM=neg,TENS=fpc,PERS=?p,NUM=?n,PTRN=?t,ROOT=?r] -> "will" "not" "have" "been" Verb[FORM=ger,PTRN=?t,ROOT=?r]
+CV[SEM=neg,TENS=fpc,PERS=?p,NUM=?n,PTRN=?t,ROOT=?r] -> "won't" "have" "been" Verb[FORM=ger,PTRN=?t,ROOT=?r]
+
+
+

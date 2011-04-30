@@ -1,0 +1,31 @@
+A dog is a cat.
+  [x, y | dog(x), cat(y), x=y]
+  [x | dog(x), cat(x)]
+A dog is not a cat.
+  [x | dog(x), -[y | cat(y), x=y]]
+  [x | dog(x), -[y | cat(x), x=y]]
+*A dog is the cat.
+  [x | dog(x), y ? cat(y), x=y]
+  [x | dog(x), cat(x)]
+*A dog is not the cat.
+  [x | dog(x), -[ | y ? cat(y), x=y]]
+  [x, y | dog(x), cat(y), -[ | x=y]]
+*The dog is the cat.
+  [ | x ? dog(x), y ? cat(y), x=y]
+  [x | dog(x), cat(x)]
+*The dog is not the cat.
+  [ | x ? dog(x), -[ | y ? cat(y), x=y]]
+  [x, y | dog(x), cat(y) -[ | x=y]]
+[a, b | cat(a), dog(b)]
+  *A dog is the cat.
+    [x | dog(x), y ? cat(y), x=y]
+    [a, b | cat(a), dog(b), dog(a)]
+  *A dog is not the cat.
+    [x | dog(x), -[ | y ? cat(y), x=y]]
+    [a, b, x | cat(a), dog(b), dog(x), -[ | x=a]]
+  *The dog is the cat.
+    [ | x ? dog(x), y ? cat(y), x=y]
+    [a | cat(a), dog(a)]
+  *The dog is not the cat.
+    [ | x ? dog(x), -[ | y ? cat(y), x=y]]
+    [a, b | dog(a), cat(b) -[ | a=b]]

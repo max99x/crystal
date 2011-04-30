@@ -1,0 +1,312 @@
+% start S
+
+################################################################################
+#                             Declarative Sentences                            #
+################################################################################
+
+# Jack dances
+S[TYP=dcl,RUL=1] -> NP[CASE=sbj,NUM=?n,PER=?p] VP[NUM=?n,PER=?p,TENS=r]
+# S[TYP=dcl,RUL=1] -> NP[CASE=sbj,NUM=?n,PER=?p] VP[NUM=?n,PER=?p,TENS=rc]
+# S[TYP=dcl,RUL=1] -> NP[CASE=sbj,NUM=?n,PER=?p] VP[NUM=?n,PER=?p,TENS=rp]
+# S[TYP=dcl,RUL=1] -> NP[CASE=sbj,NUM=?n,PER=?p] VP[NUM=?n,PER=?p,TENS=p]
+# [Jack dances] .
+S[TYP=dcl,RUL=2,+sealed] -> S[TYP=dcl,-sealed] Pnct[TYP=end]
+
+# If [Jack is happy] , [he dances]
+S[TYP=dcl,RUL=3] -> Cond S[TYP=dcl] Pnct[TYP=com] S[TYP=dcl]
+# If [Jack is tired] then [he should sleep]
+S[TYP=dcl,RUL=3] -> Cond S[TYP=dcl] 'then' S[TYP=dcl]
+# [I will go] if [you go]
+S[TYP=dcl,RUL=4] -> S[TYP=dcl] Cond S[TYP=dcl]
+
+# [John ran] and [Jack chased]
+S[TYP=dcl,RUL=5] -> S[TYP=dcl,-sealed] Cnj[-compound,+s] S[TYP=dcl,-sealed]
+# either [John ran] or [Jack chased]
+S[TYP=dcl,RUL=6] -> Cnj[GRP=?g,+compound,+init] S[TYP=dcl,-sealed] Cnj[GRP=?g,+compound,-init] S[TYP=dcl,-sealed]
+
+################################################################################
+#                                Yes/No Questions                              #
+################################################################################
+
+# [Jack dances] ?
+S[RUL=7,+sealed] -> S[-sealed] Pnct[TYP=qst]
+# Is Jack [in the room]
+S[TYP=ynq,RUL=8] -> AuxV[SEM=pos,TENS=r,NUM=?n,PER=?p,TYP=be] NP[CASE=sbj,NUM=?n,PER=?p] PRED
+# S[TYP=ynq,RUL=8] -> AuxV[SEM=pos,TENS=p,NUM=?n,PER=?p,TYP=be] NP[CASE=sbj,NUM=?n,PER=?p] PRED
+# Is Jack not [in the room]
+S[TYP=ynq,RUL=9] -> AuxV[SEM=pos,TENS=r,NUM=?n,PER=?p,TYP=be] NP[CASE=sbj,NUM=?n,PER=?p] 'not' PRED
+# S[TYP=ynq,RUL=9] -> AuxV[SEM=pos,TENS=p,NUM=?n,PER=?p,TYP=be] NP[CASE=sbj,NUM=?n,PER=?p] 'not' PRED
+# Does Jack dance salsa
+S[TYP=ynq,RUL=10] -> AuxV[SEM=pos,TENS=r,NUM=?n,PER=?p,TYP=do] NP[CASE=sbj,NUM=?n,PER=?p] VP[TENS=i]
+# S[TYP=ynq,RUL=10] -> AuxV[SEM=pos,TENS=r,NUM=?n,PER=?p,TYP=be] NP[CASE=sbj,NUM=?n,PER=?p] VP[TENS=g]
+# S[TYP=ynq,RUL=10] -> AuxV[SEM=pos,TENS=r,NUM=?n,PER=?p,TYP=have] NP[CASE=sbj,NUM=?n,PER=?p] VP[TENS=ip]
+# S[TYP=ynq,RUL=10] -> AuxV[SEM=pos,TENS=p,NUM=?n,PER=?p,TYP=do] NP[CASE=sbj,NUM=?n,PER=?p] VP[TENS=i]
+
+################################################################################
+#                               Subject Questions                              #
+################################################################################
+
+# Who [gave Lara the books]
+S[TYP=whq,RUL=11] -> Q[+sbj] VP[NUM=sg,PER=3]
+# Who [are they]
+S[TYP=whq,RUL=11] -> Q[+sbj] VP[+be]
+
+################################################################################
+#                                Object Questions                              #
+################################################################################
+
+# What does Alice [give Lara]
+S[TYP=whq,RUL=12] -> Q AuxV[SEM=pos,TENS=r,NUM=?n,PER=?p,TYP=do] NP[CASE=sbj,NUM=?n,PER=?p] VPQ[TENS=i,PTCL=NONE]
+# S[TYP=whq,RUL=12] -> Q AuxV[SEM=pos,TENS=r,NUM=?n,PER=?p,TYP=be] NP[CASE=sbj,NUM=?n,PER=?p] VPQ[TENS=g,PTCL=NONE]
+# S[TYP=whq,RUL=12] -> Q AuxV[SEM=pos,TENS=r,NUM=?n,PER=?p,TYP=have] NP[CASE=sbj,NUM=?n,PER=?p] VPQ[TENS=ip,PTCL=NONE]
+# S[TYP=whq,RUL=12] -> Q AuxV[SEM=pos,TENS=p,NUM=?n,PER=?p,TYP=do] NP[CASE=sbj,NUM=?n,PER=?p] VPQ[TENS=i,PTCL=NONE]
+
+# [Regarding what] does Alice [call James]
+S[TYP=whq,RUL=13] -> QM[PTCL=?pc] AuxV[SEM=pos,TENS=r,NUM=?n,PER=?p,TYP=do] NP[CASE=sbj,NUM=?n,PER=?p] VPQ[TENS=i,PTCL=?pc]
+# S[TYP=whq,RUL=13] -> QM[PTCL=?pc] AuxV[SEM=pos,TENS=r,NUM=?n,PER=?p,TYP=be] NP[CASE=sbj,NUM=?n,PER=?p] VPQ[TENS=g,PTCL=?pc]
+# S[TYP=whq,RUL=13] -> QM[PTCL=?pc] AuxV[SEM=pos,TENS=r,NUM=?n,PER=?p,TYP=have] NP[CASE=sbj,NUM=?n,PER=?p] VPQ[TENS=ip,PTCL=?pc]
+# S[TYP=whq,RUL=13] -> QM[PTCL=?pc] AuxV[SEM=pos,TENS=p,NUM=?n,PER=?p,TYP=do] NP[CASE=sbj,NUM=?n,PER=?p] VPQ[TENS=i,PTCL=?pc]
+
+# [To whom] does Alice [give the book]
+S[TYP=whq,RUL=13] -> QM[PTCL=PREP,path=?x1,dest=?x2,dest_conf=?x3,dir=?x4,src=?x5,loc=?x6] AuxV[SEM=pos,TENS=r,NUM=?n,PER=?p,TYP=do] NP[CASE=sbj,NUM=?n,PER=?p] VPQ[TENS=i,PTCL=PREP,path=?x1,dest=?x2,dest_conf=?x3,dir=?x4,src=?x5,loc=?x6]
+# S[TYP=whq,RUL=13] -> QM[PTCL=PREP,path=?x1,dest=?x2,dest_conf=?x3,dir=?x4,src=?x5,loc=?x6] AuxV[SEM=pos,TENS=r,NUM=?n,PER=?p,TYP=be] NP[CASE=sbj,NUM=?n,PER=?p] VPQ[TENS=g,PTCL=PREP,path=?x1,dest=?x2,dest_conf=?x3,dir=?x4,src=?x5,loc=?x6]
+# S[TYP=whq,RUL=13] -> QM[PTCL=PREP,path=?x1,dest=?x2,dest_conf=?x3,dir=?x4,src=?x5,loc=?x6] AuxV[SEM=pos,TENS=r,NUM=?n,PER=?p,TYP=have] NP[CASE=sbj,NUM=?n,PER=?p] VPQ[TENS=ip,PTCL=PREP,path=?x1,dest=?x2,dest_conf=?x3,dir=?x4,src=?x5,loc=?x6]
+# S[TYP=whq,RUL=13] -> QM[PTCL=PREP,path=?x1,dest=?x2,dest_conf=?x3,dir=?x4,src=?x5,loc=?x6] AuxV[SEM=pos,TENS=p,NUM=?n,PER=?p,TYP=do] NP[CASE=sbj,NUM=?n,PER=?p] VPQ[TENS=i,PTCL=PREP,path=?x1,dest=?x2,dest_conf=?x3,dir=?x4,src=?x5,loc=?x6]
+
+################################################################################
+#                         Prepositional Phrase Questions                       #
+################################################################################
+
+# Where is Laura
+# S[TYP=whq,RUL=14] -> 'where' AuxV[SEM=pos,TENS=r,NUM=?n,PER=?p,TYP=be] NP[CASE=sbj,NUM=?n,PER=?p]
+# S[TYP=whq,RUL=14] -> 'where' AuxV[SEM=pos,TENS=r,NUM=?n,PER=?p,TYP=be] NP[CASE=sbj,NUM=?n,PER=?p] 'being'
+# S[TYP=whq,RUL=14] -> 'where' AuxV[SEM=pos,TENS=r,NUM=?n,PER=?p,TYP=have] NP[CASE=sbj,NUM=?n,PER=?p] 'been'
+# S[TYP=whq,RUL=14] -> 'where' AuxV[SEM=pos,TENS=p,NUM=?n,PER=?p,TYP=be] NP[CASE=sbj,NUM=?n,PER=?p]
+
+################################################################################
+#                                   Verb Phrases                               #
+################################################################################
+
+# [a pretty girl]
+PRED -> NP[CASE=obj]
+# pretty
+PRED -> Adj[DEG=pos]
+# prettier than Alice
+PRED -> Adj[DEG=cmp] 'than' NP[CASE=obj]
+# in the theater
+PRED -> PP
+
+# is [a pretty girl]
+VP[NUM=?n,PER=?p,TENS=?t,+be] -> CV[PTRN=-1,NUM=?n,PER=?p,TENS=?t] PRED
+
+# [arrived at the station] and [didn't go away]
+VP[TENS=?t,PER=?p,NUM=?n,RUL=801] -> VP[TENS=?t,PER=?p,NUM=?n] Cnj[-compound,+vp] VP[TENS=?t,PER=?p,NUM=?n]
+# both [insulted him] and [kicked his dog]
+VP[TENS=?t,PER=?p,NUM=?n,RUL=802] -> Cnj[GRP=?g,+compound,+init,+vp] VP[TENS=?t,PER=?p,NUM=?n] Cnj[GRP=?g,+compound,-init,+vp] VP[TENS=?t,PER=?p,NUM=?n]
+
+################################################################################
+#                              Prepositional Phrases                           #
+################################################################################
+
+# in [the grand hall]
+PP[TYP=?t,RUL=201] -> Prep[TYP=?t,+generic] NP[CASE=obj]
+# in [the grand hall]
+PP[TYP=?t,RUL=202,+negated] -> 'not' PP[TYP=?t,-negated]
+# [in the house] or [in the yard]
+PP[TYP=?t,RUL=203] -> PP[TYP=?t] Cnj[-compound,+pp] PP[TYP=?t]
+# both [in the room] and [in the yard]
+PP[TYP=?t,RUL=204] -> Cnj[GRP=?g,+compound,+init,+pp] PP[TYP=?t] Cnj[GRP=?g,+compound,-init,+pp] PP[TYP=?t]
+
+################################################################################
+#                                  Noun Phrases                                #
+################################################################################
+
+# Eventually should support:
+# NP -> (DT) (Cardinal) (Ordinal) (Quantifier) (AdjPhrase) Nom
+
+# he
+NP[NUM=?n,CASE=sbj,PER=?p,RUL=301] -> Pro[NUM=?n,CASE=sbj,PER=?p]
+# him
+NP[NUM=?n,CASE=obj,PER=?p,RUL=302] -> Pro[NUM=?n,CASE=obj,PER=?p]
+# himself
+NP[NUM=?n,PER=3,RUL=303] -> Pro[NUM=?n,CASE=rflx]
+# ours
+NP[NUM=?n,CASE=obj,PER=?p,RUL=304] -> Pro[NUM=?n,CASE=poss_pred,PER=?p]
+# roads
+NP[NUM=pl,PER=3,RUL=305] -> Noun[NUM=pl]
+# busy roads
+NP[NUM=ms,PER=3,RUL=306] -> AJP Noun[NUM=pl]
+# water
+NP[NUM=ms,PER=3,RUL=307] -> Noun[NUM=ms]
+# cold water
+NP[NUM=ms,PER=3,RUL=308] -> AJP Noun[NUM=ms]
+# this road
+NP[NUM=?n,PER=3,RUL=309] -> DT[NUM=?n] Noun[NUM=?n]
+# Mary
+NP[NUM=?n,PER=3,RUL=310] -> PN[NUM=?n]
+# a [beautiful golden] locket
+NP[NUM=?n,PER=3,RUL=311] -> DT[NUM=?n] AJP Noun[NUM=?n]
+# the great Caesar
+NP[NUM=sg,PER=3,RUL=312] -> DT[NUM=sg,+definite] AJP PN[NUM=sg]
+# the Colosseum
+NP[NUM=sg,PER=3,RUL=313] -> DT[NUM=sg,+definite] PN[NUM=sg,SEX=n]
+# the best
+NP[PER=3,RUL=314] -> Art[+definite] Adj[DEG=sup]
+
+# [the dog] and [a cat]
+NP[NUM=pl,PER=3,CASE=?c,RUL=315] -> NP[CASE=?c] Cnj[-compound,+np] NP[CASE=?c]
+# neither [the dog] nor [the cat]
+NP[NUM=pl,PER=3,CASE=?c,RUL=316] -> Cnj[GRP=?g,+compound,+init,+np] NP[CASE=?c] Cnj[GRP=?g,+compound,-init,+np] NP[CASE=?c]
+
+# [the cat] [in the hat]
+NP[NUM=?n,CASE=?c,PER=?p,RUL=317] -> NP[NUM=?n,CASE=?c,PER=?p] PP
+
+# brain damage
+Noun[NUM=?n,FRQ=-5,RUL=318] -> Noun Noun[NUM=?n]
+
+
+################################################################################
+#                                  Proper Nouns                                #
+################################################################################
+
+# Mr Murphy
+PN[NUM=?n,SEX=?s,RUL=601] -> Ttl[NUM=?n,SEX=?s] PrpN[NUM=?n,SEX=?s]
+# Mary
+PN[NUM=?n,SEX=?s,RUL=602] -> PrpN[NUM=?n,SEX=?s]
+
+################################################################################
+#                                  Determiners                                 #
+################################################################################
+
+# the
+DT[NUM=?n,RUL=401,definite=?d,-poss] -> Art[NUM=?n,definite=?d]
+# this
+DT[NUM=?n,RUL=402,-poss] -> Det[NUM=?n,DETTYP=dem]
+# some
+DT[NUM=?n,RUL=403,-poss] -> Det[NUM=?n,DETTYP=exst]
+# another
+DT[NUM=?n,RUL=404,-poss] -> Det[NUM=?n,DETTYP=alt]
+# most
+DT[NUM=?n,RUL=405,-poss] -> Det[NUM=?n,DETTYP=deg]
+# every
+DT[NUM=?n,RUL=406,-poss] -> Det[NUM=?n,DETTYP=unvrs]
+# no
+DT[NUM=?n,RUL=407,-poss] -> Det[NUM=?n,DETTYP=neg]
+# my
+DT[NUM=sg,RUL=408,+poss] -> Pro[CASE=poss_det]
+DT[NUM=pl,RUL=408,+poss] -> Pro[CASE=poss_det]
+DT[NUM=ms,RUL=408,+poss] -> Pro[CASE=poss_det]
+# [the man]'s
+DT[NUM=sg,RUL=409,+poss] -> NP[NUM=sg] "'s"
+DT[NUM=sg,RUL=409,+poss] -> NP[NUM=sg] "'"
+DT[NUM=sg,RUL=409,+poss] -> NP[NUM=ms] "'s"
+DT[NUM=sg,RUL=409,+poss] -> NP[NUM=ms] "'"
+DT[NUM=sg,RUL=409,+poss] -> NP[NUM=pl] "'s"
+DT[NUM=sg,RUL=409,+poss] -> NP[NUM=pl] "'"
+DT[NUM=pl,RUL=409,+poss] -> NP[NUM=sg] "'s"
+DT[NUM=pl,RUL=409,+poss] -> NP[NUM=sg] "'"
+DT[NUM=pl,RUL=409,+poss] -> NP[NUM=ms] "'s"
+DT[NUM=pl,RUL=409,+poss] -> NP[NUM=ms] "'"
+DT[NUM=pl,RUL=409,+poss] -> NP[NUM=pl] "'s"
+DT[NUM=pl,RUL=409,+poss] -> NP[NUM=pl] "'"
+DT[NUM=ms,RUL=409,+poss] -> NP[NUM=sg] "'s"
+DT[NUM=ms,RUL=409,+poss] -> NP[NUM=sg] "'"
+DT[NUM=ms,RUL=409,+poss] -> NP[NUM=ms] "'s"
+DT[NUM=ms,RUL=409,+poss] -> NP[NUM=ms] "'"
+DT[NUM=ms,RUL=409,+poss] -> NP[NUM=pl] "'s"
+DT[NUM=ms,RUL=409,+poss] -> NP[NUM=pl] "'"
+
+# [his] and [Mary's]
+DT[NUM=?n,RUL=410,+poss] -> DT[NUM=?n,+poss] Cnj[-compound,+dt] DT[NUM=?n,+poss]
+# neither [Jack's] nor [her]
+DT[NUM=?n,RUL=411,+poss] -> Cnj[GRP=?g,+compound,+init,+dt] DT[NUM=?n,+poss] Cnj[GRP=?g,+compound,-init,+dt] DT[NUM=?n,+poss]
+
+################################################################################
+#                               Adjective Phrases                              #
+################################################################################
+
+# great [black leather-bound]
+AJP[RUL=501] -> Adj AJP
+# great
+AJP[RUL=502] -> Adj
+
+# [thick blue] and [thin red]
+AJP[RUL=503] -> AJP Cnj[-compound,+ajp] AJP
+# Both [thick blue] and [thin red]
+AJP[RUL=504] -> Cnj[GRP=?g,+compound,+init,+ajp] AJP Cnj[GRP=?g,+compound,-init,+ajp] AJP
+
+# [sad] but [lively]
+Adj[DEG=?d,RUL=505] -> Adj[DEG=?d] Cnj[-compound,+adj] Adj[DEG=?d]
+# either [green] or [red]
+Adj[DEG=?d,RUL=506] -> Cnj[GRP=?g,+compound,+init,+adj] Adj[DEG=?d] Cnj[GRP=?g,+compound,-init,+adj] Adj[DEG=?d]
+
+# more intricate
+Adj[DEG=cmp,SNS=?s] -> 'more' Adj[DEG=pos,SNS=?s,+std]
+# most excellent
+Adj[DEG=sup,SNS=?s] -> 'most' Adj[DEG=pos,SNS=?s,+std]
+
+################################################################################
+#                                Verb Conjugation                              #
+################################################################################
+
+# Infinitive
+CV[SEM=pos,TENS=i,PTRN=?t] -> Verb[FORM=inf,PTRN=?t]
+CV[SEM=neg,TENS=i,PTRN=?t] -> "not" Verb[FORM=inf,PTRN=?t]
+
+# Gerundive
+CV[SEM=pos,TENS=g,PTRN=?t] -> Verb[FORM=ger,PTRN=?t]
+CV[SEM=neg,TENS=g,PTRN=?t] -> "not" Verb[FORM=ger,PTRN=?t]
+
+# Participle
+CV[SEM=pos,TENS=ip,PTRN=?t] -> Verb[FORM=pp,PTRN=?t]
+CV[SEM=neg,TENS=ip,PTRN=?t] -> "not" Verb[FORM=pp,PTRN=?t]
+
+# Present
+CV[SEM=pos,TENS=r,PTRN=?t] -> Verb[FORM=inf,PTRN=?t]
+CV[SEM=pos,TENS=r,PER=3,NUM=sg,PTRN=?t] -> Verb[FORM=tps,PTRN=?t]
+CV[SEM=pos,TENS=r,PER=3,NUM=ms,PTRN=?t] -> Verb[FORM=tps,PTRN=?t]
+CV[SEM=neg,TENS=r,PER=?p,NUM=?n,PTRN=?t] -> AuxV[SEM=neg,TENS=r,PER=?p,NUM=?n,TYP=do] Verb[FORM=inf,PTRN=?t]
+# TODO: Take care of the 991/-1 confusion.
+CV[SEM=?s,TENS=r,PER=?p,NUM=?n,PTRN=991] -> AuxV[SEM=?s,TENS=r,PER=?p,NUM=?n,TYP=be]
+
+# Present Continuous
+CV[SEM=?s,TENS=rc,PER=?p,NUM=?n,PTRN=?t] -> AuxV[SEM=?s,TENS=r,PER=?p,NUM=?n,TYP=be] Verb[FORM=ger,PTRN=?t]
+
+# Present Perfect
+CV[SEM=?s,TENS=rp,PER=?p,NUM=?n,PTRN=?t] -> AuxV[SEM=?s,TENS=r,PER=?p,NUM=?n,TYP=have] Verb[FORM=pp,PTRN=?t]
+
+# Past
+CV[SEM=pos,TENS=p,PTRN=?t] -> Verb[FORM=pret,PTRN=?t]
+CV[SEM=neg,TENS=p,PTRN=?t] -> AuxV[SEM=neg,TENS=p,TYP=do] Verb[FORM=inf,PTRN=?t]
+# TODO: Take care of the 991/-1 confusion.
+CV[SEM=?s,TENS=p,PER=?p,NUM=?n,PTRN=991] -> AuxV[SEM=?s,TENS=p,PER=?p,NUM=?n,TYP=be]
+
+# Conjuncted
+# [danced] but [didn't laugh]
+CV[TENS=?t,PER=?p,NUM=?n,PTRN=?pt,FRQ=1,RUL=701] -> CV[TENS=?t,PER=?p,NUM=?n,PTRN=?pt] Cnj[-compound,+cv] CV[TENS=?t,PER=?p,NUM=?n,PTRN=?pt]
+# both [insulted] and [assaulted]
+CV[TENS=?t,PER=?p,NUM=?n,PTRN=?pt,FRQ=1,RUL=702] -> Cnj[GRP=?g,+compound,+init,+cv] CV[TENS=?t,PER=?p,NUM=?n,PTRN=?pt] Cnj[GRP=?g,+compound,-init,+cv] CV[TENS=?t,PER=?p,NUM=?n,PTRN=?pt]
+
+################################################################################
+#                                Question Pro-forms                            #
+################################################################################
+
+# what
+Q[+sbj,RUL=901] -> 'what'
+Q[+sbj,RUL=901] -> 'who'
+Q[-sbj,RUL=901] -> 'whom'
+# which book
+Q[+sbj,RUL=902] -> 'what' Noun
+Q[+sbj,RUL=902] -> 'which' Noun
+# which blue book
+Q[+sbj,RUL=903] -> 'what' AJP Noun
+Q[+sbj,RUL=903] -> 'which' AJP Noun
+# whose book
+Q[+sbj,RUL=904] -> 'whose' Noun
+# whose blue book
+Q[+sbj,RUL=905] -> 'whose' AJP Noun
+
+# concerning what
+QM[PTCL=?p] -> Particle[PTCL=?p] Q
+# in what
+QM[PTCL=PREP,path=?x1,dest=?x2,dest_conf=?x3,dir=?x4,src=?x5,loc=?x6] -> Prep[path=?x1,dest=?x2,dest_conf=?x3,dir=?x4,src=?x5,loc=?x6] Q
